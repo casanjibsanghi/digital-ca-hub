@@ -7,7 +7,7 @@ import { Button } from '@/components/ui/button';
 import { Input } from '@/components/ui/input';
 
 // Import hero images
-import heroProfessional from '@/assets/hero-professional.jpg';
+import heroSanjib from '@/assets/hero-sanjib.jpg';
 import heroDigital from '@/assets/hero-digital.jpg';
 import heroIcai from '@/assets/hero-icai.jpg';
 import heroGlobal from '@/assets/hero-global.jpg';
@@ -17,7 +17,7 @@ const HomePage = () => {
   const heroSlides = [
     {
       id: '1',
-      image: heroProfessional,
+      image: heroSanjib,
       title: 'CA Sanjib Sanghi',
       subtitle: 'Council Member, ICAI | Chartered Accountant',
       tagline: 'From Ledgers to Leadership - Transforming the future of accounting through digital innovation and strategic excellence.',
