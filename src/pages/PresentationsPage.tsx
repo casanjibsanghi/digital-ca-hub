@@ -8,7 +8,7 @@ import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from '@
 
 const PresentationsPage = () => {
   const [searchTerm, setSearchTerm] = useState('');
-  const [selectedTopic, setSelectedTopic] = useState('');
+  const [selectedTopic, setSelectedTopic] = useState('all');
 
   // Sample presentations data
   const presentations = [
@@ -106,7 +106,7 @@ const PresentationsPage = () => {
     const matchesSearch = presentation.title.toLowerCase().includes(searchTerm.toLowerCase()) ||
                          presentation.event.toLowerCase().includes(searchTerm.toLowerCase()) ||
                          presentation.description.toLowerCase().includes(searchTerm.toLowerCase());
-    const matchesTopic = !selectedTopic || presentation.topics.includes(selectedTopic);
+    const matchesTopic = selectedTopic === 'all' || presentation.topics.includes(selectedTopic);
     
     return matchesSearch && matchesTopic;
   });
@@ -160,7 +160,7 @@ const PresentationsPage = () => {
                   <SelectValue placeholder="Filter by topic" />
                 </SelectTrigger>
                 <SelectContent>
-                  <SelectItem value="">All Topics</SelectItem>
+                  <SelectItem value="all">All Topics</SelectItem>
                   {allTopics.map((topic) => (
                     <SelectItem key={topic} value={topic}>
                       {topic}
@@ -268,7 +268,7 @@ const PresentationsPage = () => {
             <Button
               onClick={() => {
                 setSearchTerm('');
-                setSelectedTopic('');
+                setSelectedTopic('all');
               }}
               variant="outline"
             >
