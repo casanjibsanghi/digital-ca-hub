@@ -49,7 +49,7 @@ const HomePage = () => {
   const timelineData = [
     {
       year: '2025',
-      title: 'Council Member, ICAI',
+      title: 'Council Member',
       organization: 'Institute of Chartered Accountants of India',
       outcomes: [
         'Elected to serve on the national council for 2025-29 term',
