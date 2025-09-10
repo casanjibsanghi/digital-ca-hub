@@ -1,51 +1,15 @@
 import { Link } from 'react-router-dom';
 import { ArrowRight, BookOpen, Users, Award, Globe, Mail } from 'lucide-react';
-import HeroCarousel from '@/components/ui/hero-carousel';
 import Timeline from '@/components/ui/timeline';
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/components/ui/card';
 import { Button } from '@/components/ui/button';
 import { Input } from '@/components/ui/input';
 
-// Import hero images
+// Import hero image
 import heroSanjib from '@/assets/hero-sanjib.jpg';
-import heroDigital from '@/assets/hero-digital.jpg';
-import heroIcai from '@/assets/hero-icai.jpg';
-import heroGlobal from '@/assets/hero-global.jpg';
 
 const HomePage = () => {
-  // Hero slides data
-  const heroSlides = [
-    {
-      id: '1',
-      image: heroSanjib,
-      title: 'CA Sanjib Sanghi',
-      subtitle: 'Council Member, ICAI | Chartered Accountant',
-      tagline: 'From Ledgers to Leadership - Transforming the future of accounting through digital innovation and strategic excellence.',
-    },
-    {
-      id: '2',
-      image: heroDigital,
-      title: 'Digital Innovation',
-      subtitle: 'AI-ready, Audit-strong',
-      tagline: 'Leading the digital transformation of accounting practices with cutting-edge AI solutions and modern methodologies.',
-    },
-    {
-      id: '3',
-      image: heroIcai,
-      title: 'ICAI Leadership',
-      subtitle: 'Council Member & Visionary',
-      tagline: 'Serving the Institute of Chartered Accountants with dedication to excellence and professional growth.',
-    },
-    {
-      id: '4',
-      image: heroGlobal,
-      title: 'Global Opportunities',
-      subtitle: 'Grow and Go Global',
-      tagline: 'Opening doors to international markets and GCC opportunities for accounting professionals worldwide.',
-    },
-  ];
-
-  // Timeline data for ICAI journey
+  // Featured sections data
   const timelineData = [
     {
       year: '2025',
@@ -126,8 +90,44 @@ const HomePage = () => {
 
   return (
     <div className="min-h-screen">
-      {/* Hero Carousel */}
-      <HeroCarousel slides={heroSlides} />
+      {/* Hero Banner */}
+      <section className="relative min-h-screen flex items-center justify-center overflow-hidden">
+        {/* Background Image */}
+        <div className="absolute inset-0 z-0">
+          <img
+            src={heroSanjib}
+            alt="CA Sanjib Sanghi"
+            className="w-full h-full object-cover"
+          />
+          <div className="absolute inset-0 bg-black/50"></div>
+        </div>
+
+        {/* Content */}
+        <div className="relative z-10 container text-center text-white">
+          <div className="max-w-4xl mx-auto">
+            <h1 className="font-montserrat font-bold text-4xl md:text-6xl lg:text-7xl mb-4">
+              CA Sanjib Sanghi
+            </h1>
+            <h2 className="text-xl md:text-2xl lg:text-3xl font-light mb-6 text-white/90">
+              Council Member | Chartered Accountant
+            </h2>
+            <p className="text-lg md:text-xl leading-relaxed max-w-3xl mx-auto mb-8 text-white/80">
+              From Ledgers to Leadership - Transforming the future of accounting through digital innovation and strategic excellence.
+            </p>
+            <div className="flex flex-col sm:flex-row gap-4 justify-center">
+              <Button size="lg" className="bg-gold hover:bg-gold-light text-slate font-semibold">
+                <Link to="/profile" className="flex items-center">
+                  Explore Profile
+                  <ArrowRight className="ml-2 h-5 w-5" />
+                </Link>
+              </Button>
+              <Button variant="outline" size="lg" className="border-white text-white hover:bg-white hover:text-slate">
+                <Link to="/connect">Connect Now</Link>
+              </Button>
+            </div>
+          </div>
+        </div>
+      </section>
 
       {/* About Teaser Section */}
       <section className="py-16 bg-gradient-to-b from-background to-muted">
