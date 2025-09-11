@@ -134,10 +134,7 @@ const HomePage = () => {
               Empowering the Future of the Profession
             </h2>
             <p className="text-lg text-muted-foreground leading-relaxed mb-8">
-              CA Sanjib Sanghi is a Council Member of ICAI and a practicing Chartered Accountant 
-              focused on digital transformation, GCC opportunities, and capacity building. He mentors 
-              professionals and students, speaks on AI in finance, and champions inclusive, 
-              tech-forward leadership in the accounting profession.
+              CA Sanjib Sanghi is a practicing Chartered Accountant and a Central Council Member of ICAI focused on Digital Transformation, GCC opportunities for Professionals and sheer Capacity Building. He mentors professionals and students, speaks on AI in finance, and champions inclusive, tech-forward leadership in the accounting profession.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <Button asChild size="lg" className="hover-lift">
