@@ -13,7 +13,7 @@ const HomePage = () => {
   const timelineData = [
     {
       year: '2025',
-      title: 'Council Member',
+      title: 'Central Council Member',
       organization: 'Institute of Chartered Accountants of India',
       outcomes: [
         'Elected to serve on the ICAI council for 2025-29 term',
@@ -36,28 +36,39 @@ const HomePage = () => {
       title: 'Vice-Chairman',
       organization: 'Eastern India Regional Council of ICAI',
       outcomes: [
-        'Published "The Digital Professional" bestseller',
+        'Chairman - Eastern India Chartered Accountants Students' Association-EIRC of ICAI',
       ],
     },
     {
-      year: '2023',
-      title: 'Regional Council Member (RCM)',
-      organization: 'EIRC-ICAI',
+      year: '2022',
+      title: 'Secretary',
+      organization: 'Eastern India Regional Council of ICAI',
       outcomes: [
-        'Served Eastern India Regional Council with distinction',
-        'Initiated student mentorship programs across 15 cities',
-        'Established MSME support framework for small businesses',
+        '',
       ],
     },
     {
-      year: '2019',
-      title: 'Vice-Chairman - Board of Studies - Operations',
-      organization: 'ICAI',
+      year: '2018',
+      title: 'Secretary',
+      organization: 'Eastern India Regional Council of ICAI',
       outcomes: [
-        'Served as Vice-Chairman - Board of Studies - Operations of ICAI',
-        'Contributed to curriculum modernization initiatives',
-        'Integrated technology modules in CA education',
-        'Launched online learning platforms for remote students',
+        '',
+      ],
+    },
+    {
+      year: '2017',
+      title: 'Treasurer',
+      organization: 'Eastern India Regional Council of ICAI',
+      outcomes: [
+        '',
+      ],
+    },
+    {
+      year: '2016',
+      title: 'Member',
+      organization: 'Eastern India Regional Council of ICAI',
+      outcomes: [
+        '',
       ],
     },
   ];
