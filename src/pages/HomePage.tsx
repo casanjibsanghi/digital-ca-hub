@@ -22,27 +22,25 @@ const HomePage = () => {
       ],
     },
     {
-      year: '2023',
-      title: 'GCC Initiative Convenor',
-      organization: 'ICAI Eastern India Regional Council',
+      year: '2024',
+      title: 'Chairman',
+      organization: 'Eastern India Regional Council of ICAI',
       outcomes: [
-        'Launched comprehensive GCC opportunity mapping program',
-        'Facilitated 500+ job placements in global capability centers',
-        'Established partnerships with 50+ multinational corporations',
+        'Organised the 49th Regional Conference with a record breaking delegate count',
+        'Organised Udaan@75 - Celebrating Womanhood: A compilation of 75 inspiring stories of women Chartered Accountants',
+        'Organised Voice of Diamonds - a We Care initiative: A compilation of 100+ stories of the diamonds of the profession',
       ],
     },
     {
-      year: '2022',
-      title: 'Digital Transformation Leader',
-      organization: 'Cloud Infosolutions',
+      year: '2023',
+      title: 'Vice-Chairman',
+      organization: 'Eastern India Regional Council of ICAI',
       outcomes: [
-        'Founded Digital Accountants community with 10,000+ members',
-        'Developed AI-powered audit automation tools',
         'Published "The Digital Professional" bestseller',
       ],
     },
     {
-      year: '2021',
+      year: '2023',
       title: 'Regional Council Member (RCM)',
       organization: 'EIRC-ICAI',
       outcomes: [
