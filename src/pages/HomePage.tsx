@@ -6,7 +6,7 @@ import { Button } from '@/components/ui/button';
 import { Input } from '@/components/ui/input';
 
 // Import hero image
-import heroSanjib from '@/assets/hero-sanjib.jpg';
+import heroSanjib from '@/assets/Hero_Sanjib.png';
 
 const HomePage = () => {
   // Featured sections data
@@ -97,9 +97,9 @@ const HomePage = () => {
           <img
             src={heroSanjib}
             alt="CA Sanjib Sanghi"
-            className="w-full h-full object-cover"
+            className="w-full h-full object-contain md:object-cover bg-slate"
           />
-          <div className="absolute inset-0 bg-black/50"></div>
+          <div className="absolute inset-0 bg-black/30"></div>
         </div>
 
         {/* Content */}
