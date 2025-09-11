@@ -53,7 +53,7 @@ const HomePage = () => {
     },
     {
       year: '2019',
-      title: 'Board of Studies Member',
+      title: 'Vice-Chairman - Board of Studies - Operations',
       organization: 'ICAI',
       outcomes: [
         'Contributed to curriculum modernization initiatives',
