@@ -131,7 +131,7 @@ const HomePage = () => {
         <div className="container">
           <div className="max-w-4xl mx-auto text-center">
             <h2 className="font-montserrat font-bold text-3xl lg:text-4xl text-primary mb-6">
-              Empowering the Future of Accounting
+              Empowering the Future of the Profession
             </h2>
             <p className="text-lg text-muted-foreground leading-relaxed mb-8">
               CA Sanjib Sanghi is a Council Member of ICAI and a practicing Chartered Accountant 
