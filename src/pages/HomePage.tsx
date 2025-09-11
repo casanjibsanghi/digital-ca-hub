@@ -56,6 +56,7 @@ const HomePage = () => {
       title: 'Vice-Chairman - Board of Studies - Operations',
       organization: 'ICAI',
       outcomes: [
+        'Served as Vice-Chairman - Board of Studies - Operations of ICAI',
         'Contributed to curriculum modernization initiatives',
         'Integrated technology modules in CA education',
         'Launched online learning platforms for remote students',
