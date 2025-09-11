@@ -112,7 +112,7 @@ const HomePage = () => {
               Central Council Member, ICAI (2025-29)
             </h2>
             <p className="text-lg md:text-xl leading-relaxed max-w-3xl mx-auto mb-8 text-white/80">
-              From Ledgers to Leadership - Transforming the future of accounting through digital innovation and strategic excellence.
+              From Ledgers to Global Leadership - Transforming the future of the profession through Digital Innovation and Strategic Excellence.
             </p>
             <div className="flex justify-center">
               <Button size="lg" className="bg-gold hover:bg-gold-light text-slate font-semibold">
