@@ -16,7 +16,7 @@ const HomePage = () => {
       title: 'Council Member',
       organization: 'Institute of Chartered Accountants of India',
       outcomes: [
-        'Elected to serve on the national council for 2025-29 term',
+        'Elected to serve on the ICAI council for 2025-29 term',
         'Leading initiatives for digital transformation in accounting',
         'Championing AI integration in audit and compliance processes',
       ],
