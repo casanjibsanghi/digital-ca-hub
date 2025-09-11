@@ -17,8 +17,8 @@ const HomePage = () => {
       organization: 'Institute of Chartered Accountants of India',
       outcomes: [
         'Elected to serve on the ICAI council for 2025-29 term',
-        'Leading initiatives for digital transformation in accounting',
-        'Championing AI integration in audit and compliance processes',
+        'Vice-Chairman - Board of Studies - Operations of ICAI',
+        'Convenor - Group to Promote India as an Accounting GCC of ICAI',
       ],
     },
     {
