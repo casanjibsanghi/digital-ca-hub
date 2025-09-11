@@ -4,18 +4,18 @@ import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
 import { Badge } from '@/components/ui/badge';
 
 // Import profile photo
-import profilePhoto from '@/assets/profile-photo.jpg';
+import profilePhoto from '@/assets/hero-sanjib.jpg';
 
 const ProfilePage = () => {
   const highlights = [
     'Council Member, ICAI (2025–29)',
-    'Former RCM, EIRC-ICAI',
-    'Author of "The Digital Professional"',
-    'Convenor/Leader for GCC initiatives and AI-in-Finance programs',
-    'Founder—Digital Accountants & Cloud Infosolutions',
-    'Mentor to 1000+ CA students and professionals',
+    'Chairman, EIRC-ICAI (2024-25)',
+    'Co-authored "The Digital Professional"',
+    'Co-authored "MSME Shorts - From Inception to Success"',
+    'Convenor, Group to Promote India as an Accounting GCC of ICAI',
+    'Vice-Chairman, Board of Studies (Operations) of ICAI',
+    'Mentor to 1000+ students and professionals',
     'Speaker at 50+ national and international conferences',
-    'Pioneer in AI-powered audit automation',
   ];
 
   const socialLinks = [
@@ -28,21 +28,21 @@ const ProfilePage = () => {
   const achievements = [
     {
       icon: Award,
-      title: 'ICAI Council Member',
-      description: 'Elected to serve the national council for 2025-29 term',
-      year: '2025',
+      title: 'Central Council Member of ICAI',
+      description: '',
+      year: '',
     },
     {
       icon: Users,
-      title: 'Digital Community Leader',
-      description: 'Built Digital Accountants community with 10,000+ members',
-      year: '2022',
+      title: 'Digital Transformation Leader',
+      description: 'Built a digital community to influence young minds',
+      year: '',
     },
     {
       icon: BookOpen,
-      title: 'Published Author',
+      title: 'Author',
       description: 'Bestselling book "The Digital Professional"',
-      year: '2023',
+      year: '',
     },
   ];
 
