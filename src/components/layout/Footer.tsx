@@ -17,7 +17,7 @@ const Footer = () => {
     { icon: Linkedin, href: '#', label: 'LinkedIn' },
     { icon: Twitter, href: '#', label: 'Twitter' },
     { icon: Youtube, href: '#', label: 'YouTube' },
-    { icon: Mail, href: 'mailto:contact@example.com', label: 'Email' },
+    { icon: Mail, href: 'mailto:sanjib@casnb.in', label: 'Email' },
   ];
 
   return (
