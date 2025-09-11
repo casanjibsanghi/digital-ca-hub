@@ -114,15 +114,12 @@ const HomePage = () => {
             <p className="text-lg md:text-xl leading-relaxed max-w-3xl mx-auto mb-8 text-white/80">
               From Ledgers to Leadership - Transforming the future of accounting through digital innovation and strategic excellence.
             </p>
-            <div className="flex flex-col sm:flex-row gap-4 justify-center">
+            <div className="flex justify-center">
               <Button size="lg" className="bg-gold hover:bg-gold-light text-slate font-semibold">
                 <Link to="/profile" className="flex items-center">
                   Explore Profile
                   <ArrowRight className="ml-2 h-5 w-5" />
                 </Link>
-              </Button>
-              <Button variant="outline" size="lg" className="border-white text-white hover:bg-white hover:text-slate">
-                <Link to="/connect">Connect Now</Link>
               </Button>
             </div>
           </div>
