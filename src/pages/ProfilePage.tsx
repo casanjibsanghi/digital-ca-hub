@@ -1,4 +1,4 @@
-import { Download, Linkedin, Facebook, Youtube, Twitter, MapPin, Award, Users, BookOpen } from 'lucide-react';
+import { Download, Linkedin, Twitter, Youtube, Mail, MapPin, Award, Users, BookOpen } from 'lucide-react';
 import { Button } from '@/components/ui/button';
 import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
 import { Badge } from '@/components/ui/badge';
@@ -6,58 +6,51 @@ import { Badge } from '@/components/ui/badge';
 // Import hero and profile images
 import heroSanjib from '@/assets/Hero_Sanjib.png';
 import profilePhoto from '@/assets/hero-sanjib.jpg';
-
 const ProfilePage = () => {
-  const highlights = [
-    'Council Member, ICAI (2025–29)',
-    'Chairman, EIRC-ICAI (2024-25)',
-    'Co-authored "The Digital Professional"',
-    'Co-authored "MSME Shorts - From Inception to Success"',
-    'Convenor, Group to Promote India as an Accounting GCC of ICAI',
-    'Vice-Chairman, Board of Studies (Operations) of ICAI',
-    'Mentor to 1000+ students and professionals',
-    'Speaker at 50+ national and international conferences',
-  ];
-
-  const socialLinks = [
-    { icon: Linkedin, href: 'https://www.linkedin.com/in/sanjibsanghi/', label: 'LinkedIn', color: 'text-blue-600' },
-    { icon: Facebook, href: 'https://www.facebook.com/sanjib.sanghi', label: 'Facebook', color: 'text-blue-600' },
-    { icon: Youtube, href: 'https://www.youtube.com/@SanjibSanghi', label: 'YouTube', color: 'text-red-600' },
-    { icon: Twitter, href: 'https://x.com/ca_ssanghi', label: 'X', color: 'text-gray-600' },
-  ];
-
-  const achievements = [
-    {
-      icon: Award,
-      title: 'Central Council Member of ICAI',
-      description: '',
-      year: '',
-    },
-    {
-      icon: Users,
-      title: 'Digital Transformation Leader',
-      description: 'Built a digital community to influence young minds',
-      year: '',
-    },
-    {
-      icon: BookOpen,
-      title: 'Author',
-      description: 'Bestselling book "The Digital Professional"',
-      year: '',
-    },
-  ];
-
-  return (
-    <div className="min-h-screen bg-gradient-to-b from-background to-muted">
+  const highlights = ['Council Member, ICAI (2025–29)', 'Chairman, EIRC-ICAI (2024-25)', 'Co-authored "The Digital Professional"', 'Co-authored "MSME Shorts - From Inception to Success"', 'Convenor, Group to Promote India as an Accounting GCC of ICAI', 'Vice-Chairman, Board of Studies (Operations) of ICAI', 'Mentor to 1000+ students and professionals', 'Speaker at 50+ national and international conferences'];
+  const socialLinks = [{
+    icon: Linkedin,
+    href: '#',
+    label: 'LinkedIn',
+    color: 'text-blue-600'
+  }, {
+    icon: Twitter,
+    href: '#',
+    label: 'Twitter',
+    color: 'text-blue-400'
+  }, {
+    icon: Youtube,
+    href: '#',
+    label: 'YouTube',
+    color: 'text-red-600'
+  }, {
+    icon: Mail,
+    href: 'mailto:contact@example.com',
+    label: 'Email',
+    color: 'text-gray-600'
+  }];
+  const achievements = [{
+    icon: Award,
+    title: 'Central Council Member of ICAI',
+    description: '',
+    year: ''
+  }, {
+    icon: Users,
+    title: 'Digital Transformation Leader',
+    description: 'Built a digital community to influence young minds',
+    year: ''
+  }, {
+    icon: BookOpen,
+    title: 'Author',
+    description: 'Bestselling book "The Digital Professional"',
+    year: ''
+  }];
+  return <div className="min-h-screen bg-gradient-to-b from-background to-muted">
       {/* Hero Banner */}
       <section className="relative h-[60vh] min-h-[400px] overflow-hidden">
         {/* Background Image */}
         <div className="absolute inset-0 z-0">
-          <img
-            src={heroSanjib}
-            alt="CA Sanjib Sanghi"
-            className="w-full h-full object-contain md:object-cover bg-slate"
-          />
+          <img src={heroSanjib} alt="CA Sanjib Sanghi" className="w-full h-full object-contain md:object-cover bg-slate" />
           <div className="absolute inset-0 bg-black/40"></div>
         </div>
 
@@ -82,11 +75,7 @@ const ProfilePage = () => {
           <div className="lg:col-span-1">
             <Card className="shadow-professional hover-lift">
               <CardContent className="p-8 text-center">
-                <img
-                  src={profilePhoto}
-                  alt="CA Sanjib Sanghi"
-                  className="w-48 h-48 rounded-full mx-auto mb-6 object-cover shadow-elevated"
-                />
+                <img src={profilePhoto} alt="CA Sanjib Sanghi" className="w-48 h-48 rounded-full mx-auto mb-6 object-cover shadow-elevated" />
                 <h2 className="font-montserrat font-bold text-2xl text-primary mb-2">
                   CA Sanjib Sanghi
                 </h2>
@@ -104,24 +93,14 @@ const ProfilePage = () => {
                     <Download className="mr-2 h-4 w-4" />
                     Download Profile PDF
                   </Button>
-                  <Button variant="outline" className="w-full">
-                    <Download className="mr-2 h-4 w-4" />
-                    Media Kit
-                  </Button>
+                  
                 </div>
 
                 {/* Social Links */}
                 <div className="flex justify-center space-x-4">
-                  {socialLinks.map((social) => (
-                    <a
-                      key={social.label}
-                      href={social.href}
-                      className={`w-10 h-10 bg-muted rounded-full flex items-center justify-center hover:scale-110 transition-transform ${social.color}`}
-                      aria-label={social.label}
-                    >
+                  {socialLinks.map(social => <a key={social.label} href={social.href} className={`w-10 h-10 bg-muted rounded-full flex items-center justify-center hover:scale-110 transition-transform ${social.color}`} aria-label={social.label}>
                       <social.icon className="h-5 w-5" />
-                    </a>
-                  ))}
+                    </a>)}
                 </div>
               </CardContent>
             </Card>
@@ -132,8 +111,7 @@ const ProfilePage = () => {
                 <CardTitle className="font-montserrat text-primary">Key Achievements</CardTitle>
               </CardHeader>
               <CardContent className="space-y-4">
-                {achievements.map((achievement) => (
-                  <div key={achievement.title} className="flex items-start space-x-3">
+                {achievements.map(achievement => <div key={achievement.title} className="flex items-start space-x-3">
                     <div className="w-10 h-10 bg-gold/10 rounded-full flex items-center justify-center flex-shrink-0">
                       <achievement.icon className="h-5 w-5 text-gold" />
                     </div>
@@ -144,8 +122,7 @@ const ProfilePage = () => {
                         {achievement.year}
                       </Badge>
                     </div>
-                  </div>
-                ))}
+                  </div>)}
               </CardContent>
             </Card>
           </div>
@@ -199,12 +176,10 @@ const ProfilePage = () => {
               </CardHeader>
               <CardContent>
                 <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
-                  {highlights.map((highlight, index) => (
-                    <div key={index} className="flex items-start space-x-3">
+                  {highlights.map((highlight, index) => <div key={index} className="flex items-start space-x-3">
                       <div className="w-2 h-2 bg-gold rounded-full mt-2 flex-shrink-0" />
                       <span className="text-muted-foreground">{highlight}</span>
-                    </div>
-                  ))}
+                    </div>)}
                 </div>
               </CardContent>
             </Card>
@@ -242,8 +217,6 @@ const ProfilePage = () => {
           </div>
         </div>
       </div>
-    </div>
-  );
+    </div>;
 };
-
 export default ProfilePage;
