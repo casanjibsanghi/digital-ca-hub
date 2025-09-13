@@ -5,6 +5,9 @@ import { Button } from '@/components/ui/button';
 import { Badge } from '@/components/ui/badge';
 import { Tabs, TabsContent, TabsList, TabsTrigger } from '@/components/ui/tabs';
 
+// Import hero image
+import heroSanjib from '@/assets/Hero_Sanjib.png';
+
 const ContributionsPage = () => {
   const [selectedArea, setSelectedArea] = useState('all');
 
@@ -253,16 +256,29 @@ const ContributionsPage = () => {
 
   return (
     <div className="min-h-screen bg-gradient-to-b from-background to-muted">
-      {/* Page Header */}
-      <section className="py-16 bg-primary text-white">
-        <div className="container">
-          <div className="text-center">
-            <h1 className="font-montserrat font-bold text-4xl lg:text-5xl mb-4">
-              Professional Contributions
-            </h1>
-            <p className="text-xl text-primary-foreground/80 max-w-2xl mx-auto">
-              Leadership roles, initiatives, and impact across ICAI and professional communities
-            </p>
+      {/* Hero Banner */}
+      <section className="relative h-[60vh] min-h-[400px] overflow-hidden">
+        {/* Background Image */}
+        <div className="absolute inset-0 z-0">
+          <img
+            src={heroSanjib}
+            alt="CA Sanjib Sanghi"
+            className="w-full h-full object-contain md:object-cover bg-slate"
+          />
+          <div className="absolute inset-0 bg-black/40"></div>
+        </div>
+
+        {/* Content */}
+        <div className="relative z-10 h-full flex items-center">
+          <div className="container text-center text-white">
+            <div className="max-w-4xl mx-auto">
+              <h1 className="font-montserrat font-bold text-4xl lg:text-5xl mb-4">
+                Professional Contributions
+              </h1>
+              <p className="text-xl text-white/90 max-w-2xl mx-auto">
+                Leadership roles, initiatives, and impact across ICAI and professional communities
+              </p>
+            </div>
           </div>
         </div>
       </section>
