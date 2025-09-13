@@ -36,7 +36,7 @@ const HomePage = () => {
       title: 'Vice-Chairman',
       organization: 'Eastern India Regional Council of ICAI',
       outcomes: [
-        'Chairman - Eastern India Chartered Accountants Students' Association-EIRC of ICAI',
+        'Chairman - Eastern India Chartered Accountants Students\' Association-EIRC of ICAI',
       ],
     },
     {
