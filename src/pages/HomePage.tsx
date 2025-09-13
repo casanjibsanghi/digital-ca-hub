@@ -77,24 +77,21 @@ const HomePage = () => {
   const featuredSections = [
     {
       title: 'Articles & Insights',
-      description: 'Deep dives into AI, digital transformation, and the future of accounting.',
+      description: 'Deep dives into Technology, AI, Digital Transformation, and the future of the profession.',
       icon: BookOpen,
       link: '/articles',
-      count: '25+ Articles',
     },
     {
       title: 'Presentations',
-      description: 'Expert talks on GCC opportunities, MSME growth, and professional development.',
+      description: 'Expert talks on Professional Opportunities, Business Growth, and Overall Professional Development.',
       icon: Users,
       link: '/presentations',
-      count: '50+ Presentations',
     },
     {
       title: 'Contributions',
-      description: 'Leadership roles, initiatives, and impact across ICAI and professional communities.',
+      description: 'Leadership roles, initiatives, and impact across ICAI and other Professional Communities.',
       icon: Award,
       link: '/contributions',
-      count: '15+ Initiatives',
     },
   ];
 
@@ -219,36 +216,6 @@ const HomePage = () => {
         </div>
       </section>
 
-      {/* Resources Strip */}
-      <section className="py-12 bg-primary">
-        <div className="container">
-          <div className="flex flex-col md:flex-row items-center justify-between">
-            <div className="text-center md:text-left mb-6 md:mb-0">
-              <h3 className="font-montserrat font-bold text-2xl text-white mb-2">
-                Professional Resources
-              </h3>
-              <p className="text-primary-foreground/80">
-                Access tools, frameworks, and insights for modern accounting professionals
-              </p>
-            </div>
-            <div className="flex flex-wrap gap-3 justify-center">
-              <Button variant="secondary" size="sm" className="bg-white/10 hover:bg-white/20 text-white border-white/20">
-                <Globe className="mr-2 h-4 w-4" />
-                GCC Opportunities
-              </Button>
-              <Button variant="secondary" size="sm" className="bg-white/10 hover:bg-white/20 text-white border-white/20">
-                <Users className="mr-2 h-4 w-4" />
-                Digital Accountants
-              </Button>
-              <Button variant="secondary" size="sm" className="bg-white/10 hover:bg-white/20 text-white border-white/20">
-                <Award className="mr-2 h-4 w-4" />
-                AI in Finance
-              </Button>
-            </div>
-          </div>
-        </div>
-      </section>
-
       {/* Newsletter Signup */}
       <section className="py-16">
         <div className="container">
@@ -257,7 +224,7 @@ const HomePage = () => {
               Stay Updated
             </h3>
             <p className="text-muted-foreground mb-8">
-              Get the latest insights on digital transformation, GCC opportunities, and professional development
+              Get the latest insights about the Profession, Digital Transformation, GCC opportunities and Professional Development
             </p>
             <div className="flex flex-col sm:flex-row gap-4 max-w-md mx-auto">
               <Input 
