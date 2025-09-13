@@ -25,7 +25,7 @@ const SEOHead = ({
     "description": "Chartered Accountant and Digital Transformation Leader",
     "url": "https://casanjibsanghi.com",
     "sameAs": [
-      "https://linkedin.com/in/sanjibsanghi",
+      "https://www.linkedin.com/in/sanjibsanghi/",
       "https://twitter.com/sanjibsanghi",
       "https://youtube.com/@sanjibsanghi"
     ],

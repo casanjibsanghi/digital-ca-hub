@@ -20,7 +20,7 @@ const ProfilePage = () => {
   ];
 
   const socialLinks = [
-    { icon: Linkedin, href: '#', label: 'LinkedIn', color: 'text-blue-600' },
+    { icon: Linkedin, href: 'https://www.linkedin.com/in/sanjibsanghi/', label: 'LinkedIn', color: 'text-blue-600' },
     { icon: Twitter, href: '#', label: 'Twitter', color: 'text-blue-400' },
     { icon: Youtube, href: '#', label: 'YouTube', color: 'text-red-600' },
     { icon: Mail, href: 'mailto:contact@example.com', label: 'Email', color: 'text-gray-600' },

@@ -19,7 +19,7 @@ const Footer = () => {
   }];
   const socialLinks = [{
     icon: Linkedin,
-    href: '#',
+    href: 'https://www.linkedin.com/in/sanjibsanghi/',
     label: 'LinkedIn'
   }, {
     icon: Twitter,
