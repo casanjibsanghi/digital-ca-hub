@@ -2,26 +2,39 @@ import { Link } from 'react-router-dom';
 import { Mail, Phone, MapPin, Linkedin, Twitter, Youtube } from 'lucide-react';
 import { Button } from '@/components/ui/button';
 import { Input } from '@/components/ui/input';
-
 const Footer = () => {
   const currentYear = new Date().getFullYear();
-
-  const quickLinks = [
-    { name: 'My Profile', path: '/profile' },
-    { name: 'Articles', path: '/articles' },
-    { name: 'Presentations', path: '/presentations' },
-    { name: 'Connect', path: '/connect' },
-  ];
-
-  const socialLinks = [
-    { icon: Linkedin, href: '#', label: 'LinkedIn' },
-    { icon: Twitter, href: '#', label: 'Twitter' },
-    { icon: Youtube, href: '#', label: 'YouTube' },
-    { icon: Mail, href: 'mailto:sanjib@casnb.in', label: 'Email' },
-  ];
-
-  return (
-    <footer className="bg-slate text-white mt-16">
+  const quickLinks = [{
+    name: 'My Profile',
+    path: '/profile'
+  }, {
+    name: 'Articles',
+    path: '/articles'
+  }, {
+    name: 'Presentations',
+    path: '/presentations'
+  }, {
+    name: 'Connect',
+    path: '/connect'
+  }];
+  const socialLinks = [{
+    icon: Linkedin,
+    href: '#',
+    label: 'LinkedIn'
+  }, {
+    icon: Twitter,
+    href: '#',
+    label: 'Twitter'
+  }, {
+    icon: Youtube,
+    href: '#',
+    label: 'YouTube'
+  }, {
+    icon: Mail,
+    href: 'mailto:sanjib@casnb.in',
+    label: 'Email'
+  }];
+  return <footer className="bg-slate text-white mt-16">
       <div className="container py-16">
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
           {/* About Section */}
@@ -29,24 +42,15 @@ const Footer = () => {
             <h3 className="font-montserrat font-bold text-xl mb-4 text-gold">
               CA Sanjib Sanghi
             </h3>
-            <p className="text-gray-300 mb-6 max-w-md">
-              Council Member, ICAI | Chartered Accountant | Digital Transformation Leader. 
-              Empowering professionals through AI-ready solutions and global opportunities.
-            </p>
+            <p className="text-gray-300 mb-6 max-w-md">Central Council Member, ICAI | Chartered Accountant | Digital Transformation Leader.
+
+
+Empowering professionals through Tech-ready solutions and global opportunities.</p>
             
             {/* Newsletter Signup */}
             <div className="mb-6">
-              <h4 className="font-semibold mb-3">Stay Updated</h4>
-              <div className="flex flex-col sm:flex-row gap-2 max-w-sm">
-                <Input 
-                  type="email" 
-                  placeholder="Enter your email"
-                  className="bg-white/10 border-white/20 text-white placeholder:text-gray-400"
-                />
-                <Button variant="default" className="bg-gold hover:bg-gold-light text-slate font-semibold">
-                  Subscribe
-                </Button>
-              </div>
+              
+              
             </div>
           </div>
 
@@ -54,16 +58,11 @@ const Footer = () => {
           <div>
             <h4 className="font-montserrat font-semibold text-lg mb-4 text-gold">Quick Links</h4>
             <ul className="space-y-2">
-              {quickLinks.map((link) => (
-                <li key={link.path}>
-                  <Link 
-                    to={link.path} 
-                    className="text-gray-300 hover:text-gold transition-colors"
-                  >
+              {quickLinks.map(link => <li key={link.path}>
+                  <Link to={link.path} className="text-gray-300 hover:text-gold transition-colors">
                     {link.name}
                   </Link>
-                </li>
-              ))}
+                </li>)}
               <li>
                 <Link to="/privacy" className="text-gray-300 hover:text-gold transition-colors">
                   Privacy Policy
@@ -83,11 +82,11 @@ const Footer = () => {
             <div className="space-y-3 mb-6">
               <div className="flex items-center text-gray-300">
                 <Mail className="h-4 w-4 mr-2" />
-                <span className="text-sm">contact@example.com</span>
+                <span className="text-sm">sanjib@casnb.in</span>
               </div>
               <div className="flex items-center text-gray-300">
                 <Phone className="h-4 w-4 mr-2" />
-                <span className="text-sm">+91 XXXXX XXXXX</span>
+                <span className="text-sm">+91 98314 34000</span>
               </div>
               <div className="flex items-center text-gray-300">
                 <MapPin className="h-4 w-4 mr-2" />
@@ -97,16 +96,9 @@ const Footer = () => {
 
             {/* Social Links */}
             <div className="flex space-x-3">
-              {socialLinks.map((social) => (
-                <a
-                  key={social.label}
-                  href={social.href}
-                  className="w-10 h-10 bg-white/10 rounded-full flex items-center justify-center hover:bg-gold hover:text-slate transition-all hover-lift"
-                  aria-label={social.label}
-                >
+              {socialLinks.map(social => <a key={social.label} href={social.href} className="w-10 h-10 bg-white/10 rounded-full flex items-center justify-center hover:bg-gold hover:text-slate transition-all hover-lift" aria-label={social.label}>
                   <social.icon className="h-4 w-4" />
-                </a>
-              ))}
+                </a>)}
             </div>
           </div>
         </div>
@@ -121,8 +113,6 @@ const Footer = () => {
           </p>
         </div>
       </div>
-    </footer>
-  );
+    </footer>;
 };
-
 export default Footer;
