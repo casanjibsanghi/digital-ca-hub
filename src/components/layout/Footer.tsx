@@ -108,9 +108,7 @@ Empowering professionals through Tech-ready solutions and global opportunities.<
           <p className="text-gray-400 text-sm mb-4 md:mb-0">
             © {currentYear} CA Sanjib Sanghi. All rights reserved.
           </p>
-          <p className="text-gray-400 text-sm">
-            Backed by <span className="text-gold font-semibold">Digital Accountants</span>
-          </p>
+          
         </div>
       </div>
     </footer>;
