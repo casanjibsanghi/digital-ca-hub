@@ -195,9 +195,6 @@ const HomePage = () => {
                   <CardTitle className="text-xl font-montserrat text-primary">
                     {section.title}
                   </CardTitle>
-                  <div className="text-sm text-gold font-semibold">
-                    {section.count}
-                  </div>
                 </CardHeader>
                 <CardContent className="text-center">
                   <CardDescription className="mb-6 leading-relaxed">
