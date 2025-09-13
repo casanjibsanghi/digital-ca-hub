@@ -1,4 +1,4 @@
-import { Download, Linkedin, Twitter, Youtube, Mail, MapPin, Award, Users, BookOpen } from 'lucide-react';
+import { Download, Linkedin, Facebook, Youtube, Mail, MapPin, Award, Users, BookOpen } from 'lucide-react';
 import { Button } from '@/components/ui/button';
 import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
 import { Badge } from '@/components/ui/badge';
@@ -21,7 +21,7 @@ const ProfilePage = () => {
 
   const socialLinks = [
     { icon: Linkedin, href: 'https://www.linkedin.com/in/sanjibsanghi/', label: 'LinkedIn', color: 'text-blue-600' },
-    { icon: Twitter, href: '#', label: 'Twitter', color: 'text-blue-400' },
+    { icon: Facebook, href: 'https://www.facebook.com/sanjib.sanghi', label: 'Facebook', color: 'text-blue-600' },
     { icon: Youtube, href: '#', label: 'YouTube', color: 'text-red-600' },
     { icon: Mail, href: 'mailto:contact@example.com', label: 'Email', color: 'text-gray-600' },
   ];

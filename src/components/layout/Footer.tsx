@@ -1,5 +1,5 @@
 import { Link } from 'react-router-dom';
-import { Mail, Phone, MapPin, Linkedin, Twitter, Youtube } from 'lucide-react';
+import { Mail, Phone, MapPin, Linkedin, Facebook, Youtube } from 'lucide-react';
 import { Button } from '@/components/ui/button';
 import { Input } from '@/components/ui/input';
 const Footer = () => {
@@ -22,9 +22,9 @@ const Footer = () => {
     href: 'https://www.linkedin.com/in/sanjibsanghi/',
     label: 'LinkedIn'
   }, {
-    icon: Twitter,
-    href: '#',
-    label: 'Twitter'
+    icon: Facebook,
+    href: 'https://www.facebook.com/sanjib.sanghi',
+    label: 'Facebook'
   }, {
     icon: Youtube,
     href: '#',

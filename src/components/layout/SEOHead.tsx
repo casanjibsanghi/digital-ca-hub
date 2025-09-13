@@ -26,7 +26,7 @@ const SEOHead = ({
     "url": "https://casanjibsanghi.com",
     "sameAs": [
       "https://www.linkedin.com/in/sanjibsanghi/",
-      "https://twitter.com/sanjibsanghi",
+      "https://www.facebook.com/sanjib.sanghi",
       "https://youtube.com/@sanjibsanghi"
     ],
     "worksFor": {
