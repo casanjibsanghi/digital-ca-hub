@@ -27,7 +27,8 @@ const SEOHead = ({
     "sameAs": [
       "https://www.linkedin.com/in/sanjibsanghi/",
       "https://www.facebook.com/sanjib.sanghi",
-      "https://youtube.com/@sanjibsanghi"
+      "https://www.youtube.com/@SanjibSanghi",
+      "https://x.com/ca_ssanghi"
     ],
     "worksFor": {
       "@type": "Organization",

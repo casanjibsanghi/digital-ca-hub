@@ -1,5 +1,5 @@
 import { Link } from 'react-router-dom';
-import { Mail, Phone, MapPin, Linkedin, Facebook, Youtube } from 'lucide-react';
+import { Mail, Twitter, Phone, MapPin, Linkedin, Facebook, Youtube } from 'lucide-react';
 import { Button } from '@/components/ui/button';
 import { Input } from '@/components/ui/input';
 const Footer = () => {
@@ -27,12 +27,12 @@ const Footer = () => {
     label: 'Facebook'
   }, {
     icon: Youtube,
-    href: '#',
+    href: 'https://www.youtube.com/@SanjibSanghi',
     label: 'YouTube'
   }, {
-    icon: Mail,
-    href: 'mailto:sanjib@casnb.in',
-    label: 'Email'
+    icon: Twitter,
+    href: 'https://x.com/ca_ssanghi',
+    label: 'X'
   }];
   return <footer className="bg-slate text-white mt-16">
       <div className="container py-16">
