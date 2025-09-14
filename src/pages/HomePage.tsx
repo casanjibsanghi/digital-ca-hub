@@ -7,105 +7,68 @@ import { Input } from '@/components/ui/input';
 
 // Import hero image
 import heroSanjib from '@/assets/Hero_Sanjib.png';
-
 const HomePage = () => {
   // Featured sections data
-  const timelineData = [
-    {
-      year: '2025',
-      title: 'Central Council Member',
-      organization: 'Institute of Chartered Accountants of India',
-      outcomes: [
-        'Elected to serve on the ICAI council for 2025-29 term',
-        'Vice-Chairman - Board of Studies - Operations of ICAI',
-        'Convenor - Group to Promote India as an Accounting GCC of ICAI',
-      ],
-    },
-    {
-      year: '2024',
-      title: 'Chairman',
-      organization: 'Eastern India Regional Council of ICAI',
-      outcomes: [
-        'Organised the 49th Regional Conference with a record breaking delegate count',
-        'Organised Udaan@75 - Celebrating Womanhood: A compilation of 75 inspiring stories of women Chartered Accountants',
-        'Organised Voice of Diamonds - a We Care initiative: A compilation of 100+ stories of the diamonds of the profession',
-      ],
-    },
-    {
-      year: '2023',
-      title: 'Vice-Chairman',
-      organization: 'Eastern India Regional Council of ICAI',
-      outcomes: [
-        'Chairman - Eastern India Chartered Accountants Students\' Association-EIRC of ICAI',
-      ],
-    },
-    {
-      year: '2022',
-      title: 'Secretary',
-      organization: 'Eastern India Regional Council of ICAI',
-      outcomes: [
-        '',
-      ],
-    },
-    {
-      year: '2018',
-      title: 'Secretary',
-      organization: 'Eastern India Regional Council of ICAI',
-      outcomes: [
-        '',
-      ],
-    },
-    {
-      year: '2017',
-      title: 'Treasurer',
-      organization: 'Eastern India Regional Council of ICAI',
-      outcomes: [
-        '',
-      ],
-    },
-    {
-      year: '2016',
-      title: 'Member',
-      organization: 'Eastern India Regional Council of ICAI',
-      outcomes: [
-        '',
-      ],
-    },
-  ];
+  const timelineData = [{
+    year: '2025',
+    title: 'Central Council Member',
+    organization: 'Institute of Chartered Accountants of India',
+    outcomes: ['Elected to serve on the ICAI council for 2025-29 term', 'Vice-Chairman - Board of Studies - Operations of ICAI', 'Convenor - Group to Promote India as an Accounting GCC of ICAI']
+  }, {
+    year: '2024',
+    title: 'Chairman',
+    organization: 'Eastern India Regional Council of ICAI',
+    outcomes: ['Organised the 49th Regional Conference with a record breaking delegate count', 'Organised Udaan@75 - Celebrating Womanhood: A compilation of 75 inspiring stories of women Chartered Accountants', 'Organised Voice of Diamonds - a We Care initiative: A compilation of 100+ stories of the diamonds of the profession']
+  }, {
+    year: '2023',
+    title: 'Vice-Chairman',
+    organization: 'Eastern India Regional Council of ICAI',
+    outcomes: ['Chairman - Eastern India Chartered Accountants Students\' Association-EIRC of ICAI']
+  }, {
+    year: '2022',
+    title: 'Secretary',
+    organization: 'Eastern India Regional Council of ICAI',
+    outcomes: ['']
+  }, {
+    year: '2018',
+    title: 'Secretary',
+    organization: 'Eastern India Regional Council of ICAI',
+    outcomes: ['']
+  }, {
+    year: '2017',
+    title: 'Treasurer',
+    organization: 'Eastern India Regional Council of ICAI',
+    outcomes: ['']
+  }, {
+    year: '2016',
+    title: 'Member',
+    organization: 'Eastern India Regional Council of ICAI',
+    outcomes: ['']
+  }];
 
   // Featured sections data
-  const featuredSections = [
-    {
-      title: 'Articles & Insights',
-      description: 'Deep dives into Technology, AI, Digital Transformation, and the future of the profession.',
-      icon: BookOpen,
-      link: '/articles',
-    },
-    {
-      title: 'Presentations',
-      description: 'Expert talks on Professional Opportunities, Business Growth, and Overall Professional Development.',
-      icon: Users,
-      link: '/presentations',
-    },
-    {
-      title: 'Contributions',
-      description: 'Leadership roles, initiatives, and impact across ICAI and other Professional Communities.',
-      icon: Award,
-      link: '/contributions',
-    },
-  ];
-
-  return (
-    <div className="min-h-screen">
+  const featuredSections = [{
+    title: 'Articles & Insights',
+    description: 'Deep dives into Technology, AI, Digital Transformation, and the future of the profession.',
+    icon: BookOpen,
+    link: '/articles'
+  }, {
+    title: 'Presentations',
+    description: 'Expert talks on Professional Opportunities, Business Growth, and Overall Professional Development.',
+    icon: Users,
+    link: '/presentations'
+  }, {
+    title: 'Contributions',
+    description: 'Leadership roles, initiatives, and impact across ICAI and other Professional Communities.',
+    icon: Award,
+    link: '/contributions'
+  }];
+  return <div className="min-h-screen">
       {/* Hero Banner */}
       <section className="relative min-h-screen flex items-center justify-center overflow-hidden">
         {/* Background Image */}
         <div className="absolute inset-0 z-0">
-          <img
-            src={heroSanjib}
-            alt="CA Sanjib Sanghi"
-            className="w-full h-full object-contain md:object-cover bg-slate"
-          />
+          <img src={heroSanjib} alt="CA Sanjib Sanghi" className="w-full h-full object-contain md:object-cover bg-slate" />
           <div className="absolute inset-0 bg-black/30"></div>
         </div>
 
@@ -143,17 +106,7 @@ const HomePage = () => {
             <p className="text-lg text-muted-foreground leading-relaxed mb-8">
               CA Sanjib Sanghi is a practicing Chartered Accountant and a Central Council Member of ICAI focused on Digital Transformation, GCC opportunities for Professionals and sheer Capacity Building. He mentors professionals and students, speaks on AI in finance, and champions inclusive, tech-forward leadership in the accounting profession.
             </p>
-            <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <Button asChild size="lg" className="hover-lift">
-                <Link to="/profile">
-                  Read Full Profile
-                  <ArrowRight className="ml-2 h-4 w-4" />
-                </Link>
-              </Button>
-              <Button variant="outline" size="lg" asChild className="hover-lift">
-                <Link to="/connect">Connect Now</Link>
-              </Button>
-            </div>
+            
           </div>
         </div>
       </section>
@@ -186,8 +139,7 @@ const HomePage = () => {
           </div>
           
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-            {featuredSections.map((section) => (
-              <Card key={section.title} className="shadow-professional hover-lift group">
+            {featuredSections.map(section => <Card key={section.title} className="shadow-professional hover-lift group">
                 <CardHeader className="text-center pb-4">
                   <div className="w-16 h-16 bg-gold/10 rounded-full flex items-center justify-center mx-auto mb-4 group-hover:bg-gold/20 transition-colors">
                     <section.icon className="h-8 w-8 text-gold" />
@@ -207,8 +159,7 @@ const HomePage = () => {
                     </Link>
                   </Button>
                 </CardContent>
-              </Card>
-            ))}
+              </Card>)}
           </div>
         </div>
       </section>
@@ -224,11 +175,7 @@ const HomePage = () => {
               Get the latest insights about the Profession, Digital Transformation, GCC opportunities and Professional Development
             </p>
             <div className="flex flex-col sm:flex-row gap-4 max-w-md mx-auto">
-              <Input 
-                type="email" 
-                placeholder="Enter your email address"
-                className="flex-1"
-              />
+              <Input type="email" placeholder="Enter your email address" className="flex-1" />
               <Button className="bg-gold hover:bg-gold-light text-slate font-semibold">
                 <Mail className="mr-2 h-4 w-4" />
                 Subscribe
@@ -240,8 +187,6 @@ const HomePage = () => {
           </div>
         </div>
       </section>
-    </div>
-  );
+    </div>;
 };
-
 export default HomePage;
