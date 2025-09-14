@@ -89,10 +89,7 @@ const ProfilePage = () => {
 
                 {/* Download Buttons */}
                 <div className="space-y-3 mb-6">
-                  <Button className="w-full bg-gold hover:bg-gold-light text-slate font-semibold">
-                    <Download className="mr-2 h-4 w-4" />
-                    Download Profile PDF
-                  </Button>
+                  
                   
                 </div>
 
