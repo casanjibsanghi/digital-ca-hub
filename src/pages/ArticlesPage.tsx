@@ -112,9 +112,16 @@ const ArticlesPage = () => {
           {filteredArticles.map(article => 
             <Card key={article.id} className="shadow-professional hover-lift group cursor-pointer transition-all duration-300 hover:shadow-lg">
               <CardContent className="p-6">
-                <h3 className="font-montserrat font-semibold text-lg text-foreground group-hover:text-primary transition-colors">
-                  {article.title}
-                </h3>
+                <a 
+                  href="https://github.com/casanjibsanghi/digital-ca-hub/blob/main/src/1.%20AQMM%20DCMM.docx"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="block"
+                >
+                  <h3 className="font-montserrat font-semibold text-lg text-foreground group-hover:text-primary transition-colors hover:underline">
+                    {article.title}
+                  </h3>
+                </a>
               </CardContent>
             </Card>
           )}
