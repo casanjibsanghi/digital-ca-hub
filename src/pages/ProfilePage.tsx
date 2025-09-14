@@ -181,6 +181,25 @@ const ProfilePage = () => {
               </CardContent>
             </Card>
 
+            {/* Personal Highlights */}
+            <Card className="shadow-professional">
+              <CardHeader>
+                <CardTitle className="font-montserrat text-2xl text-primary">
+                  Personal Highlights
+                </CardTitle>
+              </CardHeader>
+              <CardContent>
+                <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+                  {['Passionate advocate for work-life balance', 'Believer in lifelong learning and continuous improvement', 'Dedicated to empowering the next generation of professionals', 'Strong advocate for diversity and inclusion in the profession', 'Committed to sustainable business practices', 'Active community volunteer and social impact initiatives', 'Technology enthusiast and early adopter', 'Mentor and coach to emerging leaders'].map((highlight, index) => (
+                    <div key={index} className="flex items-start space-x-3">
+                      <div className="w-2 h-2 bg-gold rounded-full mt-2 flex-shrink-0" />
+                      <span className="text-muted-foreground">{highlight}</span>
+                    </div>
+                  ))}
+                </div>
+              </CardContent>
+            </Card>
+
             {/* Current Focus Areas */}
             <Card className="shadow-professional">
               <CardHeader>
