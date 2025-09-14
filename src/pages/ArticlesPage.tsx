@@ -1,75 +1,53 @@
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 import { Search, Calendar, Clock, Tag, ArrowRight } from 'lucide-react';
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/components/ui/card';
 import { Input } from '@/components/ui/input';
 import { Button } from '@/components/ui/button';
 import { Badge } from '@/components/ui/badge';
 import { Link } from 'react-router-dom';
+import { supabase } from '@/integrations/supabase/client';
 
 // Import hero image
 import heroSanjib from '@/assets/Hero_Sanjib.png';
 const ArticlesPage = () => {
   const [searchTerm, setSearchTerm] = useState('');
   const [selectedTag, setSelectedTag] = useState('');
+  const [articles, setArticles] = useState<any[]>([]);
+  const [loading, setLoading] = useState(true);
 
-  // Sample articles data
-  const articles = [{
-    id: 1,
-    title: 'The Future of AI in Accounting: Beyond Automation',
-    excerpt: 'Exploring how artificial intelligence is reshaping the accounting profession and creating new opportunities for strategic advisory services.',
-    date: '2024-12-15',
-    readTime: '8 min read',
-    tags: ['AI', 'Digital Transformation', 'Future of Work'],
-    image: '/api/placeholder/400/200'
-  }, {
-    id: 2,
-    title: 'GCC Opportunities: A Guide for Indian CAs',
-    excerpt: 'Comprehensive analysis of Global Capability Center opportunities and how chartered accountants can leverage these emerging roles.',
-    date: '2024-11-28',
-    readTime: '12 min read',
-    tags: ['GCC', 'Career Growth', 'Global Markets'],
-    image: '/api/placeholder/400/200'
-  }, {
-    id: 3,
-    title: 'Digital Audit Methodologies: The ICAI Perspective',
-    excerpt: 'Understanding the latest digital audit frameworks and their implementation in modern accounting practices.',
-    date: '2024-11-10',
-    readTime: '10 min read',
-    tags: ['Audit', 'Digital Transformation', 'ICAI'],
-    image: '/api/placeholder/400/200'
-  }, {
-    id: 4,
-    title: 'MSME Financial Management in the Digital Age',
-    excerpt: 'How small and medium enterprises can leverage digital tools for better financial management and compliance.',
-    date: '2024-10-22',
-    readTime: '6 min read',
-    tags: ['MSME', 'Financial Management', 'Digital Tools'],
-    image: '/api/placeholder/400/200'
-  }, {
-    id: 5,
-    title: 'Building a Sustainable CA Practice: Lessons from Digital Leaders',
-    excerpt: 'Insights from successful digital transformation journeys of CA firms across India.',
-    date: '2024-10-05',
-    readTime: '9 min read',
-    tags: ['Practice Management', 'Sustainability', 'Leadership'],
-    image: '/api/placeholder/400/200'
-  }, {
-    id: 6,
-    title: 'The Role of Blockchain in Modern Accounting',
-    excerpt: 'Examining the potential of blockchain technology in revolutionizing accounting practices and ensuring transparency.',
-    date: '2024-09-18',
-    readTime: '11 min read',
-    tags: ['Blockchain', 'Technology', 'Innovation'],
-    image: '/api/placeholder/400/200'
-  }];
+  // Fetch articles from Supabase
+  useEffect(() => {
+    const fetchArticles = async () => {
+      try {
+        const { data, error } = await supabase
+          .from('articles')
+          .select('*')
+          .eq('is_published', true)
+          .order('published_date', { ascending: false });
+
+        if (error) {
+          console.error('Error fetching articles:', error);
+        } else {
+          setArticles(data || []);
+        }
+      } catch (error) {
+        console.error('Error fetching articles:', error);
+      } finally {
+        setLoading(false);
+      }
+    };
+
+    fetchArticles();
+  }, []);
 
   // Get all unique tags
   const allTags = [...new Set(articles.flatMap(article => article.tags))];
 
   // Filter articles based on search and tags
   const filteredArticles = articles.filter(article => {
-    const matchesSearch = article.title.toLowerCase().includes(searchTerm.toLowerCase()) || article.excerpt.toLowerCase().includes(searchTerm.toLowerCase());
-    const matchesTag = !selectedTag || article.tags.includes(selectedTag);
+    const matchesSearch = article.title.toLowerCase().includes(searchTerm.toLowerCase()) || 
+                         (article.excerpt && article.excerpt.toLowerCase().includes(searchTerm.toLowerCase()));
+    const matchesTag = !selectedTag || (article.tags && article.tags.includes(selectedTag));
     return matchesSearch && matchesTag;
   });
   return <div className="min-h-screen bg-gradient-to-b from-background to-muted">
@@ -107,25 +85,71 @@ const ArticlesPage = () => {
           </div>
         </div>
 
+        {/* Loading State */}
+        {loading && (
+          <div className="text-center py-16">
+            <div className="animate-pulse">
+              <h3 className="font-montserrat font-semibold text-xl text-primary mb-2">
+                Loading articles...
+              </h3>
+            </div>
+          </div>
+        )}
+
         {/* Articles Grid */}
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-          {filteredArticles.map(article => 
-            <Card key={article.id} className="shadow-professional hover-lift group cursor-pointer transition-all duration-300 hover:shadow-lg">
-              <CardContent className="p-6">
-                <a 
-                  href="https://github.com/casanjibsanghi/digital-ca-hub/blob/main/src/1.%20AQMM%20DCMM.docx"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="block"
-                >
-                  <h3 className="font-montserrat font-semibold text-lg text-foreground group-hover:text-primary transition-colors hover:underline">
-                    {article.title}
-                  </h3>
-                </a>
-              </CardContent>
-            </Card>
-          )}
-        </div>
+        {!loading && (
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+            {filteredArticles.map(article => 
+              <Card key={article.id} className="shadow-professional hover-lift group cursor-pointer transition-all duration-300 hover:shadow-lg">
+                <CardContent className="p-6">
+                  <div className="mb-4">
+                    {article.image_url && (
+                      <img 
+                        src={article.image_url} 
+                        alt={article.title}
+                        className="w-full h-48 object-cover rounded-lg mb-4"
+                      />
+                    )}
+                    <div className="flex items-center gap-2 text-sm text-muted-foreground mb-2">
+                      <Calendar className="h-4 w-4" />
+                      <span>{new Date(article.published_date).toLocaleDateString()}</span>
+                      {article.read_time && (
+                        <>
+                          <Clock className="h-4 w-4 ml-2" />
+                          <span>{article.read_time}</span>
+                        </>
+                      )}
+                    </div>
+                    <a 
+                      href={article.document_url || '#'}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="block"
+                    >
+                      <h3 className="font-montserrat font-semibold text-lg text-foreground group-hover:text-primary transition-colors hover:underline mb-2">
+                        {article.title}
+                      </h3>
+                    </a>
+                    {article.excerpt && (
+                      <p className="text-muted-foreground text-sm mb-4 line-clamp-3">
+                        {article.excerpt}
+                      </p>
+                    )}
+                    {article.tags && article.tags.length > 0 && (
+                      <div className="flex flex-wrap gap-2">
+                        {article.tags.map((tag: string) => (
+                          <Badge key={tag} variant="secondary" className="text-xs">
+                            {tag}
+                          </Badge>
+                        ))}
+                      </div>
+                    )}
+                  </div>
+                </CardContent>
+              </Card>
+            )}
+          </div>
+        )}
 
         {/* Empty State */}
         {filteredArticles.length === 0 && <div className="text-center py-16">
