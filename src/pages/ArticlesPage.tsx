@@ -108,52 +108,16 @@ const ArticlesPage = () => {
         </div>
 
         {/* Articles Grid */}
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-          {filteredArticles.map(article => <Card key={article.id} className="shadow-professional hover-lift group overflow-hidden">
-              <div className="relative">
-                <img src={article.image} alt={article.title} className="w-full h-48 object-cover group-hover:scale-105 transition-transform duration-300" />
-                <div className="absolute top-4 left-4">
-                  <Badge className="bg-gold text-slate">Featured</Badge>
-                </div>
-              </div>
-              
-              <CardHeader className="pb-3">
-                <div className="flex items-center text-sm text-muted-foreground mb-2">
-                  <Calendar className="h-4 w-4 mr-1" />
-                  <span>{new Date(article.date).toLocaleDateString()}</span>
-                  <span className="mx-2">•</span>
-                  <Clock className="h-4 w-4 mr-1" />
-                  <span>{article.readTime}</span>
-                </div>
-                
-                <CardTitle className="font-montserrat text-lg group-hover:text-gold transition-colors line-clamp-2">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+          {filteredArticles.map(article => 
+            <Card key={article.id} className="shadow-professional hover-lift group cursor-pointer transition-all duration-300 hover:shadow-lg">
+              <CardContent className="p-6">
+                <h3 className="font-montserrat font-semibold text-lg text-foreground group-hover:text-primary transition-colors">
                   {article.title}
-                </CardTitle>
-              </CardHeader>
-              
-              <CardContent className="pt-0">
-                <CardDescription className="mb-4 line-clamp-3">
-                  {article.excerpt}
-                </CardDescription>
-                
-                <div className="flex flex-wrap gap-2 mb-4">
-                  {article.tags.slice(0, 2).map(tag => <Badge key={tag} variant="outline" className="text-xs">
-                      <Tag className="h-3 w-3 mr-1" />
-                      {tag}
-                    </Badge>)}
-                  {article.tags.length > 2 && <Badge variant="outline" className="text-xs">
-                      +{article.tags.length - 2} more
-                    </Badge>}
-                </div>
-                
-                <Button asChild variant="ghost" className="w-full group-hover:text-gold p-0 justify-between">
-                  <Link to={`/articles/${article.id}`}>
-                    Read Article
-                    <ArrowRight className="h-4 w-4 group-hover:translate-x-1 transition-transform" />
-                  </Link>
-                </Button>
+                </h3>
               </CardContent>
-            </Card>)}
+            </Card>
+          )}
         </div>
 
         {/* Empty State */}
