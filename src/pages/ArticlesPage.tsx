@@ -77,10 +77,44 @@ const ArticlesPage = () => {
       <div className="container py-16">
         {/* Search and Filter Section */}
         <div className="mb-12">
-          
+          <div className="max-w-4xl mx-auto space-y-6">
+            {/* Search Input */}
+            <div className="relative">
+              <Search className="absolute left-3 top-1/2 transform -translate-y-1/2 text-muted-foreground h-4 w-4" />
+              <Input
+                placeholder="Search articles..."
+                value={searchTerm}
+                onChange={(e) => setSearchTerm(e.target.value)}
+                className="pl-10"
+              />
+            </div>
+
+            {/* Tag Filters */}
+            {allTags.length > 0 && (
+              <div className="flex flex-wrap gap-2">
+                <Button
+                  variant={selectedTag === '' ? 'default' : 'outline'}
+                  size="sm"
+                  onClick={() => setSelectedTag('')}
+                >
+                  All
+                </Button>
+                {allTags.map((tag) => (
+                  <Button
+                    key={tag}
+                    variant={selectedTag === tag ? 'default' : 'outline'}
+                    size="sm"
+                    onClick={() => setSelectedTag(tag)}
+                  >
+                    {tag}
+                  </Button>
+                ))}
+              </div>
+            )}
+          </div>
 
           {/* Results count */}
-          <div className="mt-4 text-muted-foreground">
+          <div className="mt-4 text-muted-foreground text-center">
             Showing {filteredArticles.length} of {articles.length} articles
           </div>
         </div>
