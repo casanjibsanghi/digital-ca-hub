@@ -165,28 +165,7 @@ const HomePage = () => {
       </section>
 
       {/* Newsletter Signup */}
-      <section className="py-16">
-        <div className="container">
-          <div className="max-w-2xl mx-auto text-center">
-            <h3 className="font-montserrat font-bold text-2xl lg:text-3xl text-primary mb-4">
-              Stay Updated
-            </h3>
-            <p className="text-muted-foreground mb-8">
-              Get the latest insights about the Profession, Digital Transformation, GCC opportunities and Professional Development
-            </p>
-            <div className="flex flex-col sm:flex-row gap-4 max-w-md mx-auto">
-              <Input type="email" placeholder="Enter your email address" className="flex-1" />
-              <Button className="bg-gold hover:bg-gold-light text-slate font-semibold">
-                <Mail className="mr-2 h-4 w-4" />
-                Subscribe
-              </Button>
-            </div>
-            <p className="text-sm text-muted-foreground mt-4">
-              Join 5,000+ professionals receiving weekly insights
-            </p>
-          </div>
-        </div>
-      </section>
+      
     </div>;
 };
 export default HomePage;
