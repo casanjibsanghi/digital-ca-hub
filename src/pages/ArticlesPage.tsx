@@ -1,5 +1,5 @@
 import { useState, useEffect } from 'react';
-import { Search, Calendar, Clock, Tag, ArrowRight } from 'lucide-react';
+import { Search } from 'lucide-react';
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/components/ui/card';
 import { Input } from '@/components/ui/input';
 import { Button } from '@/components/ui/button';
@@ -21,9 +21,9 @@ const ArticlesPage = () => {
       try {
         const { data, error } = await supabase
           .from('articles')
-          .select('*')
+          .select('id, title, tags, document_url')
           .eq('is_published', true)
-          .order('published_date', { ascending: false });
+          .order('created_at', { ascending: false });
 
         if (error) {
           console.error('Error fetching articles:', error);
@@ -45,8 +45,7 @@ const ArticlesPage = () => {
 
   // Filter articles based on search and tags
   const filteredArticles = articles.filter(article => {
-    const matchesSearch = article.title.toLowerCase().includes(searchTerm.toLowerCase()) || 
-                         (article.excerpt && article.excerpt.toLowerCase().includes(searchTerm.toLowerCase()));
+    const matchesSearch = article.title.toLowerCase().includes(searchTerm.toLowerCase());
     const matchesTag = !selectedTag || (article.tags && article.tags.includes(selectedTag));
     return matchesSearch && matchesTag;
   });
@@ -136,39 +135,17 @@ const ArticlesPage = () => {
             {filteredArticles.map(article => 
               <Card key={article.id} className="shadow-professional hover-lift group cursor-pointer transition-all duration-300 hover:shadow-lg">
                 <CardContent className="p-6">
-                  <div className="mb-4">
-                    {article.image_url && (
-                      <img 
-                        src={article.image_url} 
-                        alt={article.title}
-                        className="w-full h-48 object-cover rounded-lg mb-4"
-                      />
-                    )}
-                    <div className="flex items-center gap-2 text-sm text-muted-foreground mb-2">
-                      <Calendar className="h-4 w-4" />
-                      <span>{new Date(article.published_date).toLocaleDateString()}</span>
-                      {article.read_time && (
-                        <>
-                          <Clock className="h-4 w-4 ml-2" />
-                          <span>{article.read_time}</span>
-                        </>
-                      )}
-                    </div>
+                  <div className="space-y-4">
                     <a 
                       href={article.document_url || '#'}
                       target="_blank"
                       rel="noopener noreferrer"
                       className="block"
                     >
-                      <h3 className="font-montserrat font-semibold text-lg text-foreground group-hover:text-primary transition-colors hover:underline mb-2">
+                      <h3 className="font-montserrat font-semibold text-lg text-foreground group-hover:text-primary transition-colors hover:underline">
                         {article.title}
                       </h3>
                     </a>
-                    {article.excerpt && (
-                      <p className="text-muted-foreground text-sm mb-4 line-clamp-3">
-                        {article.excerpt}
-                      </p>
-                    )}
                     {article.tags && article.tags.length > 0 && (
                       <div className="flex flex-wrap gap-2">
                         {article.tags.map((tag: string) => (
