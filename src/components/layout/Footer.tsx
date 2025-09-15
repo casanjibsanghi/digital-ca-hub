@@ -42,7 +42,7 @@ const Footer = () => {
             <h3 className="font-montserrat font-bold text-xl mb-4 text-gold">
               CA Sanjib Sanghi
             </h3>
-            <p className="text-gray-300 mb-6 max-w-md">Central Council Member, ICAI | Chartered Accountant | Digital Transformation Leader.
+            <p className="text-gray-300 mb-6 max-w-md">Central Council Member, ICAI | Chartered Accountant | Digital Transformation Leader. 
 
 
 Empowering professionals through Tech-ready solutions and global opportunities.</p>
