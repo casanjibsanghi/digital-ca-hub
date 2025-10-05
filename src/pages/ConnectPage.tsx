@@ -184,6 +184,7 @@ const ConnectPage = () => {
                 </Card>
               ))}
             </div>
+          </div>
 
           {/* Contact Form */}
           <div>
