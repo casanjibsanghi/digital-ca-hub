@@ -76,8 +76,8 @@ const ArticlesPage = () => {
     driveLink: "https://drive.google.com/file/d/1qnkNNXT_JxdpyX5vtZ2ZhTqiS-xL3vsO/view?usp=sharing"
   }, {
     id: 18,
-    title: "ICAI CA GPT: Transforming Chartered Accountancy with AI",
-    driveLink: "https://drive.google.com/file/d/15k_p9DDrVc9oWuPia0EnB70Ys1Dsi22a/view?usp=sharing"
+    title: "RISE: Resilience, Integrity, Strategy, Excellence — A Working Formula for Professionals (with a Chartered Accountant’s Lens)",
+    driveLink: "https://drive.google.com/file/d/1VgypvT3LAhmpPS_YWHKYGLppdX4CGcxm/view?usp=sharing"
   }
   // Add more articles here
   ];
