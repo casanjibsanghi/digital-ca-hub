@@ -54,29 +54,29 @@ const ConnectPage = () => {
     {
       icon: Mail,
       label: 'Email',
-      value: 'sanjib.sanghi@example.com',
-      href: 'mailto:sanjib.sanghi@example.com',
+      value: 'sanjib@casnb.in',
+      href: 'mailto:sanjib@casnb.in',
       description: 'Primary communication channel',
     },
     {
       icon: Phone,
-      label: 'Phone',
-      value: '+91 98765 43210',
-      href: 'tel:+919876543210',
-      description: 'Business hours: 9 AM - 6 PM IST',
+      label: 'Call',
+      value: '+91 98314 34000',
+      href: 'tel:+919831434000',
+      description: 'Ping me over WhatsApp for immediate responses',
     },
     {
       icon: MapPin,
       label: 'Office',
       value: 'Kolkata, West Bengal, India',
       href: '#',
-      description: 'Eastern India Regional Office',
+      description: '',
     },
     {
       icon: MessageSquare,
       label: 'WhatsApp',
-      value: 'Quick Connect',
-      href: 'https://wa.me/919876543210',
+      value: 'Quick Connect: +91 98314 34000',
+      href: 'https://wa.me/919831434000',
       description: 'For urgent queries',
     },
   ];
@@ -184,33 +184,6 @@ const ConnectPage = () => {
                 </Card>
               ))}
             </div>
-
-            {/* Office Hours */}
-            <Card className="shadow-professional">
-              <CardHeader>
-                <CardTitle className="font-montserrat text-primary">Office Hours</CardTitle>
-              </CardHeader>
-              <CardContent>
-                <div className="space-y-2 text-muted-foreground">
-                  <div className="flex justify-between">
-                    <span>Monday - Friday</span>
-                    <span className="font-medium">9:00 AM - 6:00 PM IST</span>
-                  </div>
-                  <div className="flex justify-between">
-                    <span>Saturday</span>
-                    <span className="font-medium">10:00 AM - 2:00 PM IST</span>
-                  </div>
-                  <div className="flex justify-between">
-                    <span>Sunday</span>
-                    <span className="font-medium">Closed</span>
-                  </div>
-                </div>
-                <p className="text-sm text-muted-foreground mt-4">
-                  Response time: 24-48 hours for email inquiries
-                </p>
-              </CardContent>
-            </Card>
-          </div>
 
           {/* Contact Form */}
           <div>
