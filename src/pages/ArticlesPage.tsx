@@ -63,19 +63,19 @@ const ArticlesPage = () => {
     title: "The Triple “A” Advantage – Artificial Intelligence, Accounting and Advisory",
     driveLink: "https://drive.google.com/file/d/1TNpUUqll7vRy2U5-prXbAkqBPSksrKM2/view?usp=sharing"
   }, {
-    id: 9,
-    title: "ICAI CA GPT: Transforming Chartered Accountancy with AI",
-    driveLink: "https://drive.google.com/file/d/15k_p9DDrVc9oWuPia0EnB70Ys1Dsi22a/view?usp=sharing"
+    id: 15,
+    title: "Startup India, led by Chartered Accountants: Our Role in the growth of Entrepreneurial Ecosystem",
+    driveLink: "https://drive.google.com/file/d/1Tqa3Q3whNtvL6b6QexrysdR273hVfKJj/view?usp=sharing"
   }, {
-    id: 9,
-    title: "ICAI CA GPT: Transforming Chartered Accountancy with AI",
-    driveLink: "https://drive.google.com/file/d/15k_p9DDrVc9oWuPia0EnB70Ys1Dsi22a/view?usp=sharing"
+    id: 16,
+    title: "Antardrishti to Antarashtriya: From Inner Clarity to Global Leadership",
+    driveLink: "https://drive.google.com/file/d/18_4ehECyi1hy3PqoWAazvXcl-m5bPFJV/view?usp=sharing"
   }, {
-    id: 9,
-    title: "ICAI CA GPT: Transforming Chartered Accountancy with AI",
-    driveLink: "https://drive.google.com/file/d/15k_p9DDrVc9oWuPia0EnB70Ys1Dsi22a/view?usp=sharing"
+    id: 17,
+    title: "From Ledgers to Global Leadership: Why we as Chartered Accountants Must Ditch the ‘Number Cruncher’ Tag",
+    driveLink: "https://drive.google.com/file/d/1qnkNNXT_JxdpyX5vtZ2ZhTqiS-xL3vsO/view?usp=sharing"
   }, {
-    id: 9,
+    id: 18,
     title: "ICAI CA GPT: Transforming Chartered Accountancy with AI",
     driveLink: "https://drive.google.com/file/d/15k_p9DDrVc9oWuPia0EnB70Ys1Dsi22a/view?usp=sharing"
   }
