@@ -11,7 +11,22 @@ const ArticlesPage = () => {
     {
       id: 1,
       title: "AQMM DCMM",
-      driveLink: "https://drive.google.com/file/d/YOUR_FILE_ID/view"
+      driveLink: "https://drive.google.com/file/d/1i2W_LdigO4pxF8DDBzsQnpJht304ovuD/view?usp=sharing"
+    },
+    {
+      id: 2,
+      title: "Audit Quality Maturity Model: Enhancing Audit Standards",
+      driveLink: "https://drive.google.com/file/d/1jAk9_6-zO6cU2Io2z_kfU6_Aa0hAKVOj/view?usp=sharing"
+    },
+    {
+      id: 3,
+      title: "Blockchain Technology: Revolutionizing the Accounting Landscape",
+      driveLink: "https://drive.google.com/file/d/1nB0JNYVcue9Y6v1zHAEf9sVIJ6HEmh32/view?usp=sharing"
+    },
+    {
+      id: 4,
+      title: "ChatGPT at the helm – Empowering Businesses – Empowering the World",
+      driveLink: "https://drive.google.com/file/d/1xbxOtIGzYQoeZkKdpvDd8nvb0Az-Gz2J/view?usp=sharing"
     },
     // Add more articles here
   ];
