@@ -85,7 +85,7 @@ const ArticlesPage = () => {
                 rel="noopener noreferrer"
                 className="block p-6 border rounded-lg bg-card hover:shadow-lg transition-all duration-300 hover:border-primary"
               >
-                <h3 className="font-montserrat font-semibold text-lg text-foreground hover:text-primary transition-colors">
+                <h3 className="font-montserrat font-semibold text-lg text-foreground hover:text-primary transition-colors text-center">
                   {article.title}
                 </h3>
               </a>
