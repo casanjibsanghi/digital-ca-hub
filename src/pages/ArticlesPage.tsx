@@ -28,6 +28,76 @@ const ArticlesPage = () => {
       title: "ChatGPT at the helm – Empowering Businesses – Empowering the World",
       driveLink: "https://drive.google.com/file/d/1xbxOtIGzYQoeZkKdpvDd8nvb0Az-Gz2J/view?usp=sharing"
     },
+    {
+      id: 5,
+      title: "Building your Custom GPT",
+      driveLink: "https://drive.google.com/file/d/1sbG5ubu1bJdQEVsDeqXUUDyV-VdW-aAo/view?usp=sharing"
+    },
+    {
+      id: 6,
+      title: "Elevating Excellence: Navigating Digital Competency Maturity Model",
+      driveLink: "https://drive.google.com/file/d/1aaO2Tg9cA7nniMUfMcJEE7d64MYBCGhN/view?usp=sharing"
+    },
+    {
+      id: 7,
+      title: "Python in Excel: Harnessing the Power of Two Titans - The Best of Both Worlds for Data Analysis and Visualization",
+      driveLink: "https://drive.google.com/file/d/1k91S0g-tkxDCxpTYZHRKsyxUqmlINcDd/view?usp=sharing"
+    },
+    {
+      id: 8,
+      title: "Harnessing Google My Business: A Game-Changer for Local Enterprises",
+      driveLink: "https://drive.google.com/file/d/1I6I-5Nn47ApblYnA7Gop1KPn-Shw_ofo/view?usp=sharing"
+    },
+    {
+      id: 9,
+      title: "ICAI CA GPT: Transforming Chartered Accountancy with AI",
+      driveLink: "https://drive.google.com/file/d/15k_p9DDrVc9oWuPia0EnB70Ys1Dsi22a/view?usp=sharing"
+    },
+    {
+      id: 10,
+      title: "Embracing Technology for Financial Forecasting: Tech tells your Future",
+      driveLink: "https://drive.google.com/file/d/1wbUOPriqPfRzwmqGEX7efeHnCXViPD71/view?usp=sharing"
+    },
+    {
+      id: 11,
+      title: "Chartered Accountants as Professionals – In the World of MSMEs",
+      driveLink: "https://drive.google.com/file/d/1EdDAA60J6q5G3VCUVYpeVNnSB77gAx0m/view?usp=sharing"
+    },
+    {
+      id: 12,
+      title: "Sustainable Finance: Investing in Our Collective Future",
+      driveLink: "https://drive.google.com/file/d/1qoTtUmQQtU-0XW6Ct6V6br_HqvKWa1EP/view?usp=sharing"
+    },
+    {
+      id: 13,
+      title: "The AI-Ready Chartered Accountant and a GCC Leader: Skills Every Professionals Must Learn in the Next 2 Years",
+      driveLink: "https://drive.google.com/file/d/1E4xey2ycNU_PvZERRO_CnfGt2lVAdZ9-/view?usp=sharing"
+    },
+    {
+      id: 14,
+      title: "The Triple “A” Advantage – Artificial Intelligence, Accounting and Advisory",
+      driveLink: "https://drive.google.com/file/d/1TNpUUqll7vRy2U5-prXbAkqBPSksrKM2/view?usp=sharing"
+    },
+    {
+      id: 9,
+      title: "ICAI CA GPT: Transforming Chartered Accountancy with AI",
+      driveLink: "https://drive.google.com/file/d/15k_p9DDrVc9oWuPia0EnB70Ys1Dsi22a/view?usp=sharing"
+    },
+    {
+      id: 9,
+      title: "ICAI CA GPT: Transforming Chartered Accountancy with AI",
+      driveLink: "https://drive.google.com/file/d/15k_p9DDrVc9oWuPia0EnB70Ys1Dsi22a/view?usp=sharing"
+    },
+    {
+      id: 9,
+      title: "ICAI CA GPT: Transforming Chartered Accountancy with AI",
+      driveLink: "https://drive.google.com/file/d/15k_p9DDrVc9oWuPia0EnB70Ys1Dsi22a/view?usp=sharing"
+    },
+    {
+      id: 9,
+      title: "ICAI CA GPT: Transforming Chartered Accountancy with AI",
+      driveLink: "https://drive.google.com/file/d/15k_p9DDrVc9oWuPia0EnB70Ys1Dsi22a/view?usp=sharing"
+    },
     // Add more articles here
   ];
 
