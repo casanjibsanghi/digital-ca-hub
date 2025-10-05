@@ -190,7 +190,7 @@ const ProfilePage = () => {
               </CardHeader>
               <CardContent>
                 <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
-                  {['Married to Mrs. Anju Sanghi', 'A happy Father of a Son and a Daughter', 'Hailing from Kolkata, West Bengal', 'Technology enthusiast and early adopter'].map((highlight, index) => (
+                  {['Married to Mrs. Anju Sanghi', 'A happy Father of a son and a daughter - Anish Sanghi and Arshita Sanghi', 'Hailing from Kolkata, West Bengal', 'Technology enthusiast and early adopter'].map((highlight, index) => (
                     <div key={index} className="flex items-start space-x-3">
                       <div className="w-2 h-2 bg-gold rounded-full mt-2 flex-shrink-0" />
                       <span className="text-muted-foreground">{highlight}</span>
