@@ -114,8 +114,8 @@ const ArticlesPage = () => {
         {filteredArticles.length === 0 ? <div className="text-center py-12">
             <p className="text-muted-foreground">No articles found.</p>
           </div> : <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
-            {filteredArticles.map(article => <a key={article.id} href={article.driveLink} target="_blank" rel="noopener noreferrer" className="block p-6 border rounded-lg bg-card hover:shadow-lg transition-all duration-300 hover:border-primary">
-                <h3 className="font-montserrat font-semibold text-lg text-foreground hover:text-primary transition-colors text-center">
+            {filteredArticles.map(article => <a key={article.id} href={article.driveLink} target="_blank" rel="noopener noreferrer" className="flex items-center justify-center min-h-[120px] p-6 border rounded-lg bg-card hover:bg-gold/10 hover:shadow-lg transition-all duration-300 hover:border-gold">
+                <h3 className="font-montserrat font-semibold text-lg text-foreground hover:text-gold transition-colors text-center">
                   {article.title}
                 </h3>
               </a>)}
