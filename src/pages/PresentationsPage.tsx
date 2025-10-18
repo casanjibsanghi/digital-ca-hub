@@ -25,8 +25,13 @@ const PresentationsPage = () => {
     },
     {
       id: 4,
-      title: "AI in BPO and KPO",
-      driveLink: "https://docs.google.com/presentation/d/1kio6KLbeyWYG03YSkBv-JCOvF3t7n8eo/edit?usp=drive_link&ouid=111982360594636997129&rtpof=true&sd=true"
+      title: "Technology - Present and Future",
+      driveLink: "https://docs.google.com/presentation/d/1R2hiyfdPe89IINMMewOPc3asnUodqIX3/edit?usp=sharing&ouid=111982360594636997129&rtpof=true&sd=true"
+    },
+    {
+      id: 5,
+      title: "Technology - Present and Future",
+      driveLink: "https://docs.google.com/presentation/d/1R2hiyfdPe89IINMMewOPc3asnUodqIX3/edit?usp=sharing&ouid=111982360594636997129&rtpof=true&sd=true"
     }
   ];
 
