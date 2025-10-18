@@ -13,7 +13,32 @@ const HomePage = () => {
     year: '2025',
     title: 'Central Council Member',
     organization: 'Institute of Chartered Accountants of India',
-    outcomes: ['Elected to serve on the ICAI council for 2025-29 term', 'Vice-Chairman - Board of Studies - Operations of ICAI', 'Convenor - Group to Promote India as an Accounting GCC of ICAI']
+    outcomes: ['Elected to serve on the ICAI council for 2025-29 term', 'Vice-Chairman - Board of Studies - Operations of ICAI', 'Convenor - Group to Promote India as an Accounting GCC of ICAI','Dy. Convenor - Digital Re-Engineering & Transformation Directorate of ICAI', 'Dy. Convenor - Human Resources Directorate of ICAI', 
+               'Member - AI in ICAI, Auditing & Assurance Standards Board, Board of Internal Audit & Management Accounting, Board of Studies - Academics,
+               Centre of Excellence Directorate, Committee for Aggregation of CA Firms, Committee for Members in Entrepreneurship & Public Service,
+               Committee for Members in Industry & Business, Committee on Financial Markets and Investors' Protection, Committee on Promoting Work Life Balance,
+               Corporate Laws and Corporate Governance Committee, Development of International Trade, Service & WTO Directorate (under International Affairs Committee),
+               Digital Accounting and Assurance Board, Disciplinary Committee (u/s 21 D read with section 17)"
+Editorial Board
+Estate Development Directorate (under Infrastructure Development Committee)
+Ethical Standards Board
+Executive Committee
+Expert Advisory Committee
+Finance Committee
+Group on Enabling Lifestyle for Environment - LIFE (under Committee on Promoting Work Life Balance)
+GST & Indirect Taxes Committee
+Infrastructure Development Committee
+Insolvency & Valuation Standards Board
+International Affairs Committee
+Management Committee
+Professional Development Committee
+Professional Skills Enrichment Committee
+Public Relations Committee
+Publication & CDS Directorate
+RBA Directorate
+Research Committee
+UDIN Directorate
+']
   }, {
     year: '2024',
     title: 'Chairman',
