@@ -89,8 +89,19 @@ const ProfilePage = () => {
 
                 {/* Download Buttons */}
                 <div className="space-y-3 mb-6">
-                  
-                  
+                  <Button 
+                    className="w-full"
+                    asChild
+                  >
+                    <a 
+                      href="YOUR_GOOGLE_DRIVE_LINK_HERE" 
+                      target="_blank" 
+                      rel="noopener noreferrer"
+                    >
+                      <Download className="mr-2 h-4 w-4" />
+                      Download Profile
+                    </a>
+                  </Button>
                 </div>
 
                 {/* Social Links */}
