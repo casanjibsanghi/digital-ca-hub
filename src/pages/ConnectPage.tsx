@@ -53,32 +53,32 @@ const ConnectPage = () => {
   const contactInfo = [
     {
       icon: Mail,
-      label: 'Email',
-      value: 'sanjib@casnb.in',
-      href: 'mailto:sanjib@casnb.in',
+      label: 'Email (for ICAI related issues)',
+      value: 'sanjibsanghi@icai.in',
+      href: 'mailto:sanjibsanghi@icai.in',
       description: 'Primary communication channel',
     },
     {
+      icon: Mail,
+      label: 'Email (for Professional Matters)',
+      value: 'sanjib@casnb.in',
+      href: 'mailto:sanjib@casnb.in',
+      description: 'Secondary communication channel',
+    },
+    {
       icon: Phone,
-      label: 'Call',
+      label: 'Call/WhatsApp',
       value: '+91 98314 34000',
       href: 'tel:+919831434000',
-      description: 'Ping me over WhatsApp for immediate responses',
+      description: 'WhatsApp/Call to connect',
     },
     {
       icon: MapPin,
       label: 'Office',
-      value: 'Kolkata, West Bengal, India',
+      value: 'Emperador, 10th Floor, 36C/1 Chowringhee Road, Kolkata - 700071',
       href: '#',
       description: '',
-    },
-    {
-      icon: MessageSquare,
-      label: 'WhatsApp',
-      value: 'Quick Connect: +91 98314 34000',
-      href: 'https://wa.me/919831434000',
-      description: 'For urgent queries',
-    },
+    }
   ];
 
   const topicOptions = [
