@@ -12,23 +12,22 @@ const PresentationsPage = () => {
       id: 1,
       title: "AI in BPO and KPO",
       driveLink: "https://docs.google.com/presentation/d/1kio6KLbeyWYG03YSkBv-JCOvF3t7n8eo/edit?usp=drive_link&ouid=111982360594636997129&rtpof=true&sd=true"
-    }
+    },
     {
       id: 2,
       title: "The Peer Review Mastery",
       driveLink: "https://docs.google.com/presentation/d/1V27B9p7QtPpvkLDSRA_MYSGDODhdLf_H/edit?usp=drive_link&ouid=111982360594636997129&rtpof=true&sd=true"
-    }
-  {
+    },
+    {
       id: 3,
       title: "Audit Trail in 10 Minutes",
       driveLink: "https://docs.google.com/presentation/d/18OhAUvgPrrtHNLnzY0ntWGEmrUDSHtgj/edit?usp=drive_link&ouid=111982360594636997129&rtpof=true&sd=true"
-    }
-  {
+    },
+    {
       id: 4,
       title: "AI in BPO and KPO",
       driveLink: "https://docs.google.com/presentation/d/1kio6KLbeyWYG03YSkBv-JCOvF3t7n8eo/edit?usp=drive_link&ouid=111982360594636997129&rtpof=true&sd=true"
     }
-    // Add more presentations here
   ];
 
   // Filter presentations based on search
