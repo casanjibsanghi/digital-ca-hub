@@ -48,7 +48,7 @@ UDIN Directorate
     year: '2023',
     title: 'Vice-Chairman',
     organization: 'Eastern India Regional Council of ICAI',
-    outcomes: ['Chairman - Eastern India Chartered Accountants Students\' Association-EIRC of ICAI']
+    outcomes: ['Chairman - Eastern India Chartered Accountants Students\' Association-EIRC of ICAI - Organised the 'RRR - Reskill | Resolve | Rejoice' - National Conference for CA Students']
   }, {
     year: '2022',
     title: 'Secretary',
