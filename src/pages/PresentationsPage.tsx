@@ -33,6 +33,71 @@ const PresentationsPage = () => {
       title: "Digital Empowerment for Chartered Accountants",
       driveLink: "https://docs.google.com/presentation/d/1CWWqfyRkb42orrSTxHqC_Eyzibcg1dcO/edit?slide=id.p1#slide=id.p1"
     },
+    {
+      id: 6,
+      title: "Capacity Building",
+      driveLink: "https://docs.google.com/presentation/d/1Jm5NOUnqECqLzK1c1YhWG6KZOiaKJpP1/edit?slide=id.p1#slide=id.p1"
+    },
+    {
+      id: 7,
+      title: "Profession@75",
+      driveLink: "http://docs.google.com/presentation/d/1tClezwuSiezFPN71a9ssIqwKsIhH_TtF/edit?slide=id.p1#slide=id.p1"
+    },
+    {
+      id: 8,
+      title: "ChatGPT & AI",
+      driveLink: "https://docs.google.com/presentation/d/1WhVMTEsC-co6otLEXQfPoV_jb4SR9rjK/edit?slide=id.p1#slide=id.p1"
+    },
+    {
+      id: 9,
+      title: "Data Visualisation Presentation",
+      driveLink: "https://docs.google.com/presentation/d/1IB_F1uFalUxkiPWy1STgBdRi4TZ510G2/edit?slide=id.p1#slide=id.p1"
+    },
+    {
+      id: 10,
+      title: "Technology - Opportunities and Challenges for Practitioners",
+      driveLink: "https://docs.google.com/presentation/d/1P8KhBrmfpgOfC0-CkWrS0bCQ-pKOXge-/edit?slide=id.p1#slide=id.p1"
+    },
+    {
+      id: 11,
+      title: "MSME-Automation-Guwahati",
+      driveLink: "https://docs.google.com/presentation/d/1U_hM2eukUAml2F49yI5MoOFCCOBp72vj/edit?slide=id.p1#slide=id.p1"
+    },
+    {
+      id: 12,
+      title: "Becoming AI Ready",
+      driveLink: "https://docs.google.com/presentation/d/1RmYQmCw8KSauZrCOjfdje46sk17edDrh/edit?slide=id.p1#slide=id.p1"
+    },
+    {
+      id: 13.1,
+      title: "CAs leading GCCs_Sanjib Sanghi",
+      driveLink: "https://docs.google.com/presentation/d/17fcXk7Lv-y6seVGaUcxgFaek2Hk7n8G6/edit?slide=id.p1#slide=id.p1"
+    },
+    {
+      id: 13.2,
+      title: "Future Fit Chartered Accountants",
+      driveLink: "https://docs.google.com/presentation/d/1GMZn-hctLc-xD38o2pEn9k9r-CsR1L5h/edit?slide=id.p1#slide=id.p1"
+    },
+    {
+      id: 14,
+      title: "Transformative Technologies  Risks &  Opportunities",
+      driveLink: "https://docs.google.com/presentation/d/1mC0xHwG9C6JDjlTqrgzvD1ZgvQDnVVoe/edit?slide=id.p1#slide=id.p1"
+    },
+    {
+      id: 15,
+      title: "AI & Startup PPT",
+      driveLink: "https://docs.google.com/presentation/d/1q72Mp1POV-7S0WSBgkRWP4rXUKvrOPQi/edit?slide=id.p1#slide=id.p1"
+    },
+    {
+      id: 16,
+      title: "India GCC Panorama",
+      driveLink: "https://docs.google.com/presentation/d/1InVHIQe3mRb3Z_BpeF9EAwvmey26oSU1/edit?slide=id.p1#slide=id.p1"
+    },
+    {
+      id: 17,
+      title: "GATE",
+      driveLink: "https://docs.google.com/presentation/d/1q6vz4KrrF1VAN88bATNXeDpzjkOQ7Hy0/edit?slide=id.p1#slide=id.p1"
+    },
   ];
 
   // Filter presentations based on search
