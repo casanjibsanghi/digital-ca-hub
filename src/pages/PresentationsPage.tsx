@@ -30,9 +30,9 @@ const PresentationsPage = () => {
     },
     {
       id: 5,
-      title: "Technology - Present and Future",
-      driveLink: "https://docs.google.com/presentation/d/1R2hiyfdPe89IINMMewOPc3asnUodqIX3/edit?usp=sharing&ouid=111982360594636997129&rtpof=true&sd=true"
-    }
+      title: "Digital Empowerment for Chartered Accountants",
+      driveLink: "https://docs.google.com/presentation/d/1CWWqfyRkb42orrSTxHqC_Eyzibcg1dcO/edit?slide=id.p1#slide=id.p1"
+    },
   ];
 
   // Filter presentations based on search
