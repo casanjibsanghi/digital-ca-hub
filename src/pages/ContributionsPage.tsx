@@ -24,7 +24,7 @@ const ContributionsPage = () => {
     description: 'Global Capability Center opportunities and partnerships',
     icon: Building,
     color: 'text-blue-600',
-    count: 4
+    count: 6
   }, {
     id: 'students-bos',
     name: 'Students & BoS',
@@ -100,6 +100,38 @@ const ContributionsPage = () => {
     link: '',
     file: '',
     achievements: ['Signed MoUs with 8 international accounting institutes', 'Established reciprocal recognition frameworks', 'Created global mobility pathways for Indian CAs']
+  }, {
+    area: 'gcc-initiative',
+    title: 'GCC-DELHI',
+    period: '2023 - Present',
+    summary: 'GCC opportunities and networking initiatives in Delhi NCR region',
+    link: '',
+    file: '',
+    achievements: ['Established GCC networking hub in Delhi', 'Connected CAs with major GCC employers', 'Organized quarterly GCC career fairs']
+  }, {
+    area: 'gcc-initiative',
+    title: 'GCC-AHMEDABAD',
+    period: '2023 - Present',
+    summary: 'GCC opportunities and partnerships in Gujarat region',
+    link: '',
+    file: '',
+    achievements: ['Facilitated GCC job placements in Ahmedabad', 'Created regional GCC career portal', 'Conducted GCC awareness workshops']
+  }, {
+    area: 'gcc-initiative',
+    title: 'GCC HYDERABAD',
+    period: '2023 - Present',
+    summary: 'GCC initiatives in Telangana and Andhra Pradesh regions',
+    link: '',
+    file: '',
+    achievements: ['Partnered with major Hyderabad-based GCCs', 'Established GCC training programs', 'Built network of 100+ GCC professionals']
+  }, {
+    area: 'gcc-initiative',
+    title: 'GCC-PUNE',
+    period: '2023 - Present',
+    summary: 'GCC opportunities and skill development in Pune region',
+    link: '',
+    file: '',
+    achievements: ['Launched GCC readiness program in Pune', 'Connected with 50+ GCC companies', 'Organized technical skill workshops']
   },
   // Students & BoS
   {
