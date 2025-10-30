@@ -7,6 +7,8 @@ import gccDelhiCover from '@/assets/gcc-delhi-cover.png';
 import gccDelhiPartners from '@/assets/gcc-delhi-partners.png';
 import gccAhmedabadCover from '@/assets/gcc-ahmedabad-cover.png';
 import gccAhmedabadPartners from '@/assets/gcc-ahmedabad-partners.png';
+import gccHyderabadCover from '@/assets/gcc-hyderabad-cover.png';
+import gccHyderabadPartners from '@/assets/gcc-hyderabad-partners.png';
 
 const GCCInitiativePage = () => {
   const gccContributions = [
@@ -50,7 +52,8 @@ const GCCInitiativePage = () => {
       summary: 'GCC initiatives in Telangana and Andhra Pradesh regions',
       link: '',
       file: '',
-      achievements: ['Partnered with major Hyderabad-based GCCs', 'Established GCC training programs', 'Built network of 100+ GCC professionals']
+      achievements: ['Partnered with major Hyderabad-based GCCs', 'Established GCC training programs', 'Built network of 100+ GCC professionals'],
+      images: [gccHyderabadCover, gccHyderabadPartners]
     },
     {
       title: 'GCC-PUNE',
