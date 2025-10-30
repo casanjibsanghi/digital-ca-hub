@@ -3,6 +3,8 @@ import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/com
 import { Button } from '@/components/ui/button';
 import { Badge } from '@/components/ui/badge';
 import heroGlobal from '@/assets/hero-global.jpg';
+import gccDelhiCover from '@/assets/gcc-delhi-cover.png';
+import gccDelhiPartners from '@/assets/gcc-delhi-partners.png';
 
 const GCCInitiativePage = () => {
   const gccContributions = [
@@ -28,7 +30,8 @@ const GCCInitiativePage = () => {
       summary: 'GCC opportunities and networking initiatives in Delhi NCR region',
       link: '',
       file: '',
-      achievements: ['Established GCC networking hub in Delhi', 'Connected CAs with major GCC employers', 'Organized quarterly GCC career fairs']
+      achievements: ['Established GCC networking hub in Delhi', 'Connected CAs with major GCC employers', 'Organized quarterly GCC career fairs'],
+      images: [gccDelhiCover, gccDelhiPartners]
     },
     {
       title: 'GCC-AHMEDABAD',
@@ -112,21 +115,33 @@ const GCCInitiativePage = () => {
                         <Award className="h-4 w-4 text-gold mt-1 flex-shrink-0" />
                         <span className="text-sm">{achievement}</span>
                       </li>
-                    ))}
-                  </ul>
-                </div>
-                {(contribution.link || contribution.file) && (
-                  <div className="flex gap-3 mt-4">
-                    {contribution.link && (
-                      <Button variant="outline" size="sm" asChild>
-                        <a href={contribution.link} target="_blank" rel="noopener noreferrer">
-                          <ExternalLink className="h-4 w-4 mr-2" />
-                          Learn More
-                        </a>
-                      </Button>
-                    )}
-                  </div>
-                )}
+                     ))}
+                   </ul>
+                 </div>
+                 {(contribution as any).images && (
+                   <div className="mt-6 grid grid-cols-1 md:grid-cols-2 gap-4">
+                     {(contribution as any).images.map((image: string, i: number) => (
+                       <img 
+                         key={i} 
+                         src={image} 
+                         alt={`${contribution.title} flyer ${i + 1}`}
+                         className="w-full rounded-lg shadow-md hover:shadow-lg transition-shadow"
+                       />
+                     ))}
+                   </div>
+                 )}
+                 {(contribution.link || contribution.file) && (
+                   <div className="flex gap-3 mt-4">
+                     {contribution.link && (
+                       <Button variant="outline" size="sm" asChild>
+                         <a href={contribution.link} target="_blank" rel="noopener noreferrer">
+                           <ExternalLink className="h-4 w-4 mr-2" />
+                           Learn More
+                         </a>
+                       </Button>
+                     )}
+                   </div>
+                 )}
               </CardContent>
             </Card>
           ))}
