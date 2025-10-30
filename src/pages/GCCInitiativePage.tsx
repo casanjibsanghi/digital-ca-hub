@@ -13,24 +13,8 @@ import gccHyderabadPartners from '@/assets/gcc-hyderabad-partners.png';
 const GCCInitiativePage = () => {
   const gccContributions = [
     {
-      title: 'GCC Opportunities Mapping Program',
-      period: '2023 - Present',
-      summary: 'Comprehensive initiative to connect Indian CAs with global capability centers',
-      link: '',
-      file: '',
-      achievements: ['Mapped 200+ GCC opportunities across 15 countries', 'Facilitated 500+ job placements', 'Established partnerships with 50+ multinational corporations']
-    },
-    {
-      title: 'International Partnership Development',
-      period: '2022 - Present',
-      summary: 'Building strategic alliances with global accounting bodies and corporations',
-      link: '',
-      file: '',
-      achievements: ['Signed MoUs with 8 international accounting institutes', 'Established reciprocal recognition frameworks', 'Created global mobility pathways for Indian CAs']
-    },
-    {
       title: 'GCC-DELHI',
-      period: '2023 - Present',
+      period: 'JUNE - 2025',
       summary: 'GCC opportunities and networking initiatives in Delhi NCR region',
       link: '',
       file: '',
@@ -39,7 +23,7 @@ const GCCInitiativePage = () => {
     },
     {
       title: 'GCC-AHMEDABAD',
-      period: '2023 - Present',
+      period: 'AUGUST - 2025',
       summary: 'GCC opportunities and partnerships in Gujarat region',
       link: '',
       file: '',
@@ -48,7 +32,7 @@ const GCCInitiativePage = () => {
     },
     {
       title: 'GCC HYDERABAD',
-      period: '2023 - Present',
+      period: 'OCTOBER - 2025',
       summary: 'GCC initiatives in Telangana and Andhra Pradesh regions',
       link: '',
       file: '',
@@ -57,7 +41,7 @@ const GCCInitiativePage = () => {
     },
     {
       title: 'GCC-PUNE',
-      period: '2023 - Present',
+      period: 'NOVEMBER - 2025',
       summary: 'GCC opportunities and skill development in Pune region',
       link: '',
       file: '',
