@@ -16,13 +16,6 @@ const ContributionsPage = () => {
 
   // Contribution areas data
   const contributionAreas = [{
-    id: 'icai-leadership',
-    name: 'ICAI Leadership',
-    description: 'Leadership roles and governance at national and regional levels',
-    icon: Award,
-    color: 'text-gold',
-    count: 5
-  }, {
     id: 'gcc-initiative',
     name: 'GCC Initiative',
     description: 'Global Capability Center opportunities and partnerships',
@@ -51,71 +44,45 @@ const ContributionsPage = () => {
     color: 'text-red-600',
     count: 5
   }, {
-    id: 'publications-tools',
-    name: 'Publications/Tools',
+    id: 'books-coauthored',
+    name: 'Books Co-Authored',
     description: 'Books, articles, and professional development tools',
     icon: BookOpen,
     color: 'text-indigo-600',
-    count: 3
+    count: 2
   }];
 
   // Detailed contributions data
   const contributions = [
-  // ICAI Leadership
-  {
-    area: 'icai-leadership',
-    title: 'Council Member, ICAI',
-    period: '2025 - 2029',
-    summary: 'Elected to serve the national council, leading digital transformation initiatives',
-    link: '',
-    file: '',
-    achievements: ['Spearheading AI integration policies for the accounting profession', 'Leading curriculum modernization committee', 'Establishing international partnership frameworks']
-  }, {
-    area: 'icai-leadership',
-    title: 'Regional Council Member (RCM), EIRC-ICAI',
-    period: '2021 - 2025',
-    summary: 'Served Eastern India Regional Council with focus on member services and professional development',
-    link: '',
-    file: '',
-    achievements: ['Launched 15+ professional development programs', 'Increased regional membership engagement by 40%', 'Established digital service delivery framework']
-  }, {
-    area: 'icai-leadership',
-    title: 'Board of Studies Member',
-    period: '2019 - 2023',
-    summary: 'Contributed to curriculum development and educational policy formulation',
-    link: '',
-    file: '',
-    achievements: ['Integrated technology modules in CA curriculum', 'Developed online assessment frameworks', 'Introduced practical AI training components']
-  },
   // GCC Initiative
   {
     area: 'gcc-initiative',
-    title: 'GCC-DELHI',
-    period: '27 & 28TH JUNE - 2025',
+    title: 'ICAI GCC Summit-Delhi',
+    period: 'JUNE - 2025',
     summary: 'GCC opportunities and networking initiatives in Delhi NCR region',
     link: '',
     file: '',
     achievements: ['Established GCC networking hub in Delhi', 'Connected CAs with major GCC employers', 'Organized quarterly GCC career fairs']
   }, {
     area: 'gcc-initiative',
-    title: 'GCC-AHMEDABAD',
-    period: '29 & 30TH AUGUST  - 2025',
+    title: 'ICAI GCC Summit-Ahmedabad',
+    period: 'AUGUST - 2025',
     summary: 'GCC opportunities and partnerships in Gujarat region',
     link: '',
     file: '',
     achievements: ['Facilitated GCC job placements in Ahmedabad', 'Created regional GCC career portal', 'Conducted GCC awareness workshops']
   }, {
     area: 'gcc-initiative',
-    title: 'GCC HYDERABAD',
-    period: ' 9 & 10TH OCTOBER - 2025',
+    title: 'ICAI GCC Summit-Hyderabad',
+    period: 'OCTOBER - 2025',
     summary: 'GCC initiatives in Telangana and Andhra Pradesh regions',
     link: '',
     file: '',
     achievements: ['Partnered with major Hyderabad-based GCCs', 'Established GCC training programs', 'Built network of 100+ GCC professionals']
   }, {
     area: 'gcc-initiative',
-    title: 'GCC-PUNE',
-    period: '28 & 29TH NOVEMBER-2025',
+    title: 'ICAI GCC Summit -Pune',
+    period: 'NOVEMBER-2025',
     summary: 'GCC opportunities and skill development in Pune region',
     link: '',
     file: '',
@@ -175,21 +142,21 @@ const ContributionsPage = () => {
     file: '',
     achievements: ['Built community of 10,000+ digital accounting professionals', 'Organized 50+ digital transformation workshops', 'Created comprehensive digital skills certification program']
   },
-  // Publications/Tools
+  // Books Co-Authored
   {
-    area: 'publications-tools',
+    area: 'books-coauthored',
     title: 'The Digital Professional (Book)',
-    period: '2023',
+    period: '2018',
     summary: 'Bestselling book on digital transformation for accounting professionals',
-    link: '',
+    link: 'https://heyzine.com/flip-book/3b95274311.html',
     file: '',
     achievements: ['Sold 25,000+ copies across India and internationally', 'Translated into 3 regional languages', 'Adopted as reference text by 20+ CA training institutes']
   }, {
-    area: 'publications-tools',
-    title: 'Professional Development Toolkit',
-    period: '2021 - Present',
-    summary: 'Comprehensive suite of tools and resources for CA professional development',
-    link: '',
+    area: 'books-coauthored',
+    title: 'MSME Shorts:Handholding MSMEs - From Inception to Success',
+    period: '2024',
+    summary: 'A Guide to Small Businesses compiling key insights on MSMEs',
+    link: 'https://heyzine.com/flip-book/5c549b0e51.html#page/6',
     file: '',
     achievements: ['Downloaded by 50,000+ professionals', 'Regular updates with latest industry trends', 'Integrated with major CA learning platforms']
   }];
