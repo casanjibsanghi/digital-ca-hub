@@ -5,6 +5,8 @@ import { Badge } from '@/components/ui/badge';
 import heroGlobal from '@/assets/hero-global.jpg';
 import gccDelhiCover from '@/assets/gcc-delhi-cover.png';
 import gccDelhiPartners from '@/assets/gcc-delhi-partners.png';
+import gccAhmedabadCover from '@/assets/gcc-ahmedabad-cover.png';
+import gccAhmedabadPartners from '@/assets/gcc-ahmedabad-partners.png';
 
 const GCCInitiativePage = () => {
   const gccContributions = [
@@ -39,7 +41,8 @@ const GCCInitiativePage = () => {
       summary: 'GCC opportunities and partnerships in Gujarat region',
       link: '',
       file: '',
-      achievements: ['Facilitated GCC job placements in Ahmedabad', 'Created regional GCC career portal', 'Conducted GCC awareness workshops']
+      achievements: ['Facilitated GCC job placements in Ahmedabad', 'Created regional GCC career portal', 'Conducted GCC awareness workshops'],
+      images: [gccAhmedabadCover, gccAhmedabadPartners]
     },
     {
       title: 'GCC HYDERABAD',
