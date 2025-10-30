@@ -25,7 +25,7 @@ const ContributionsPage = () => {
     description: 'Global Capability Center opportunities and partnerships',
     icon: Building,
     color: 'text-blue-600',
-    count: 6
+    count: 4
   }, {
     id: 'students-bos',
     name: 'Students & BoS',
@@ -87,24 +87,8 @@ const ContributionsPage = () => {
   // GCC Initiative
   {
     area: 'gcc-initiative',
-    title: 'GCC Opportunities Mapping Program',
-    period: '2023 - Present',
-    summary: 'Comprehensive initiative to connect Indian CAs with global capability centers',
-    link: '',
-    file: '',
-    achievements: ['Mapped 200+ GCC opportunities across 15 countries', 'Facilitated 500+ job placements', 'Established partnerships with 50+ multinational corporations']
-  }, {
-    area: 'gcc-initiative',
-    title: 'International Partnership Development',
-    period: '2022 - Present',
-    summary: 'Building strategic alliances with global accounting bodies and corporations',
-    link: '',
-    file: '',
-    achievements: ['Signed MoUs with 8 international accounting institutes', 'Established reciprocal recognition frameworks', 'Created global mobility pathways for Indian CAs']
-  }, {
-    area: 'gcc-initiative',
     title: 'GCC-DELHI',
-    period: '2023 - Present',
+    period: '27 & 28TH JUNE - 2025',
     summary: 'GCC opportunities and networking initiatives in Delhi NCR region',
     link: '',
     file: '',
@@ -112,7 +96,7 @@ const ContributionsPage = () => {
   }, {
     area: 'gcc-initiative',
     title: 'GCC-AHMEDABAD',
-    period: '2023 - Present',
+    period: '29 & 30TH AUGUST  - 2025',
     summary: 'GCC opportunities and partnerships in Gujarat region',
     link: '',
     file: '',
@@ -120,7 +104,7 @@ const ContributionsPage = () => {
   }, {
     area: 'gcc-initiative',
     title: 'GCC HYDERABAD',
-    period: '2023 - Present',
+    period: ' 9 & 10TH OCTOBER - 2025',
     summary: 'GCC initiatives in Telangana and Andhra Pradesh regions',
     link: '',
     file: '',
@@ -128,7 +112,7 @@ const ContributionsPage = () => {
   }, {
     area: 'gcc-initiative',
     title: 'GCC-PUNE',
-    period: '2023 - Present',
+    period: '28 & 29TH NOVEMBER-2025',
     summary: 'GCC opportunities and skill development in Pune region',
     link: '',
     file: '',
