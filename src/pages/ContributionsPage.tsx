@@ -254,7 +254,14 @@ const ContributionsPage = () => {
 
         {/* Filter Tabs */}
         <Tabs value={selectedArea} onValueChange={setSelectedArea} className="mb-8">
-          
+          <TabsList className="w-full flex flex-wrap justify-center gap-2">
+            <TabsTrigger value="all">All Contributions</TabsTrigger>
+            {contributionAreas.map(area => (
+              <TabsTrigger key={area.id} value={area.id}>
+                {area.name}
+              </TabsTrigger>
+            ))}
+          </TabsList>
 
           <TabsContent value={selectedArea} className="mt-8">
             {/* Contributions List */}
