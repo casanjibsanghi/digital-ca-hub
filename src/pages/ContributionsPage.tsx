@@ -5,7 +5,10 @@ import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/com
 import { Button } from '@/components/ui/button';
 import { Badge } from '@/components/ui/badge';
 import { Tabs, TabsContent, TabsList, TabsTrigger } from '@/components/ui/tabs';
-
+import gccdelhi from '@/assets/gcc_delhi.jpeg';
+import gccahmedabad from '@/assets/gcc_ahmedabad.jpeg';
+import gcchyderabad from '@/assets/gcc_hyderabad.jpeg';
+import gccpune from '@/assets/gcc_pune.jpeg';
 // Import hero image
 import heroSanjib from '@/assets/Hero_Sanjib.png';
 const ContributionsPage = () => {
