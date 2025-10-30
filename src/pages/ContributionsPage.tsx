@@ -258,7 +258,56 @@ const ContributionsPage = () => {
 
           <TabsContent value={selectedArea} className="mt-8">
             {/* Contributions List */}
-            
+            <div className="grid gap-6">
+              {filteredContributions.map((contribution, index) => {
+                const area = getAreaById(contribution.area);
+                return (
+                  <Card key={index} className="shadow-professional hover-lift">
+                    <CardHeader>
+                      <div className="flex items-start justify-between">
+                        <div className="flex-1">
+                          <div className="flex items-center gap-3 mb-2">
+                            {area && <area.icon className={`h-5 w-5 ${area.color}`} />}
+                            <Badge variant="outline">{contribution.period}</Badge>
+                          </div>
+                          <CardTitle className="font-montserrat text-xl mb-2">
+                            {contribution.title}
+                          </CardTitle>
+                          <CardDescription className="text-base">
+                            {contribution.summary}
+                          </CardDescription>
+                        </div>
+                      </div>
+                    </CardHeader>
+                    <CardContent>
+                      <div className="space-y-2">
+                        <h4 className="font-semibold text-sm text-muted-foreground">Key Achievements:</h4>
+                        <ul className="space-y-2">
+                          {contribution.achievements.map((achievement, i) => (
+                            <li key={i} className="flex items-start gap-2">
+                              <Award className="h-4 w-4 text-gold mt-1 flex-shrink-0" />
+                              <span className="text-sm">{achievement}</span>
+                            </li>
+                          ))}
+                        </ul>
+                      </div>
+                      {(contribution.link || contribution.file) && (
+                        <div className="flex gap-3 mt-4">
+                          {contribution.link && (
+                            <Button variant="outline" size="sm" asChild>
+                              <a href={contribution.link} target="_blank" rel="noopener noreferrer">
+                                <ExternalLink className="h-4 w-4 mr-2" />
+                                Learn More
+                              </a>
+                            </Button>
+                          )}
+                        </div>
+                      )}
+                    </CardContent>
+                  </Card>
+                );
+              })}
+            </div>
           </TabsContent>
         </Tabs>
 
