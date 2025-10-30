@@ -1,4 +1,5 @@
 import { useState } from 'react';
+import { Link } from 'react-router-dom';
 import { Users, Building, GraduationCap, Briefcase, Cpu, BookOpen, ExternalLink, Award } from 'lucide-react';
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/components/ui/card';
 import { Button } from '@/components/ui/button';
@@ -236,7 +237,14 @@ const ContributionsPage = () => {
       <div className="container py-16">
         {/* Overview Cards */}
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 mb-12">
-          {contributionAreas.map(area => <Card key={area.id} className={`shadow-professional hover-lift cursor-pointer transition-all ${selectedArea === area.id ? 'ring-2 ring-gold' : ''}`} onClick={() => setSelectedArea(area.id)}>
+          {contributionAreas.map(area => {
+            const CardWrapper = area.id === 'gcc-initiative' 
+              ? ({ children }: { children: React.ReactNode }) => <Link to="/gcc-initiative">{children}</Link>
+              : ({ children }: { children: React.ReactNode }) => <div onClick={() => setSelectedArea(area.id)}>{children}</div>;
+            
+            return (
+              <CardWrapper key={area.id}>
+                <Card className={`shadow-professional hover-lift cursor-pointer transition-all ${selectedArea === area.id ? 'ring-2 ring-gold' : ''}`}>
               <CardHeader className="text-center pb-3">
                 <div className={`w-16 h-16 mx-auto mb-3 rounded-full bg-muted flex items-center justify-center ${area.color}`}>
                   <area.icon className="h-8 w-8" />
@@ -249,7 +257,10 @@ const ContributionsPage = () => {
               <CardContent className="text-center pt-0">
                 <CardDescription>{area.description}</CardDescription>
               </CardContent>
-            </Card>)}
+            </Card>
+          </CardWrapper>
+        );
+      })}
         </div>
 
         {/* Filter Tabs */}

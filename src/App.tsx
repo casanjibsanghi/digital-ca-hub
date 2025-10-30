@@ -10,6 +10,7 @@ import ProfilePage from "./pages/ProfilePage";
 import ArticlesPage from "./pages/ArticlesPage";
 import PresentationsPage from "./pages/PresentationsPage";
 import ContributionsPage from "./pages/ContributionsPage";
+import GCCInitiativePage from "./pages/GCCInitiativePage";
 import ConnectPage from "./pages/ConnectPage";
 import PrivacyPage from "./pages/PrivacyPage";
 import TermsPage from "./pages/TermsPage";
@@ -32,6 +33,7 @@ const App = () => (
               <Route path="articles" element={<ArticlesPage />} />
               <Route path="presentations" element={<PresentationsPage />} />
               <Route path="contributions" element={<ContributionsPage />} />
+              <Route path="gcc-initiative" element={<GCCInitiativePage />} />
               <Route path="connect" element={<ConnectPage />} />
               <Route path="privacy" element={<PrivacyPage />} />
               <Route path="terms" element={<TermsPage />} />
