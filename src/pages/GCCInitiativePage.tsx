@@ -3,12 +3,10 @@ import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/com
 import { Button } from '@/components/ui/button';
 import { Badge } from '@/components/ui/badge';
 import heroGlobal from '@/assets/hero-global.jpg';
-import gccDelhiCover from '@/assets/gcc-delhi-cover.png';
-import gccDelhiPartners from '@/assets/gcc-delhi-partners.png';
-import gccAhmedabadCover from '@/assets/gcc-ahmedabad-cover.png';
-import gccAhmedabadPartners from '@/assets/gcc-ahmedabad-partners.png';
-import gccHyderabadCover from '@/assets/gcc-hyderabad-cover.png';
-import gccHyderabadPartners from '@/assets/gcc-hyderabad-partners.png';
+import gccDelhiFlyer from '@/assets/gcc-delhi-flyer.jpeg';
+import gccAhmedabadFlyer from '@/assets/gcc-ahmedabad-flyer.jpeg';
+import gccHyderabadFlyer from '@/assets/gcc-hyderabad-flyer.jpeg';
+import gccPuneFlyer from '@/assets/gcc-pune-flyer.jpeg';
 
 const GCCInitiativePage = () => {
   const gccContributions = [
@@ -19,7 +17,7 @@ const GCCInitiativePage = () => {
       link: '',
       file: '',
       achievements: ['Established GCC networking hub in Delhi', 'Connected CAs with major GCC employers', 'Organized quarterly GCC career fairs'],
-      images: [gccDelhiCover, gccDelhiPartners]
+      images: [gccDelhiFlyer]
     },
     {
       title: 'ICAI GCC Summit-Ahmedabad',
@@ -28,7 +26,7 @@ const GCCInitiativePage = () => {
       link: '',
       file: '',
       achievements: ['Facilitated GCC job placements in Ahmedabad', 'Created regional GCC career portal', 'Conducted GCC awareness workshops'],
-      images: [gccAhmedabadCover, gccAhmedabadPartners]
+      images: [gccAhmedabadFlyer]
     },
     {
       title: 'ICAI GCC Summit-Hyderabad',
@@ -37,7 +35,7 @@ const GCCInitiativePage = () => {
       link: '',
       file: '',
       achievements: ['Partnered with major Hyderabad-based GCCs', 'Established GCC training programs', 'Built network of 100+ GCC professionals'],
-      images: [gccHyderabadCover, gccHyderabadPartners]
+      images: [gccHyderabadFlyer]
     },
     {
       title: 'ICAI GCC Summit-Pune',
@@ -45,7 +43,8 @@ const GCCInitiativePage = () => {
       summary: 'GCC opportunities and skill development in Pune region',
       link: '',
       file: '',
-      achievements: ['Launched GCC readiness program in Pune', 'Connected with 50+ GCC companies', 'Organized technical skill workshops']
+      achievements: ['Launched GCC readiness program in Pune', 'Connected with 50+ GCC companies', 'Organized technical skill workshops'],
+      images: [gccPuneFlyer]
     }
   ];
 
@@ -109,12 +108,12 @@ const GCCInitiativePage = () => {
                    </ul>
                  </div>
                  {(contribution as any).images && (
-                   <div className="mt-6 grid grid-cols-1 md:grid-cols-2 gap-4">
+                   <div className="mt-6">
                      {(contribution as any).images.map((image: string, i: number) => (
                        <img 
                          key={i} 
                          src={image} 
-                         alt={`${contribution.title} flyer ${i + 1}`}
+                         alt={`${contribution.title} flyer`}
                          className="w-full rounded-lg shadow-md hover:shadow-lg transition-shadow"
                        />
                      ))}
