@@ -8,7 +8,7 @@ import heroDigital from '@/assets/hero-digital.jpg';
 const StudentsBosPage = () => {
   const contributions = [
     {
-      title: 'RUN-100',
+      title: '@RUN100',
       period: 'March - 2025',
       summary: 'Reskill – Upskill – Newskill | 100 Days – 100 Session',
       link: '',
