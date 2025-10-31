@@ -13,7 +13,7 @@ import gccHyderabadPartners from '@/assets/gcc-hyderabad-partners.png';
 const GCCInitiativePage = () => {
   const gccContributions = [
     {
-      title: 'GCC-DELHI',
+      title: 'ICAI GCC Summit-Delhi',
       period: 'JUNE - 2025',
       summary: 'GCC opportunities and networking initiatives in Delhi NCR region',
       link: '',
@@ -22,7 +22,7 @@ const GCCInitiativePage = () => {
       images: [gccDelhiCover, gccDelhiPartners]
     },
     {
-      title: 'GCC-AHMEDABAD',
+      title: 'ICAI GCC Summit-Ahmedabad',
       period: 'AUGUST - 2025',
       summary: 'GCC opportunities and partnerships in Gujarat region',
       link: '',
@@ -31,7 +31,7 @@ const GCCInitiativePage = () => {
       images: [gccAhmedabadCover, gccAhmedabadPartners]
     },
     {
-      title: 'GCC HYDERABAD',
+      title: 'ICAI GCC Summit-Hyderabad',
       period: 'OCTOBER - 2025',
       summary: 'GCC initiatives in Telangana and Andhra Pradesh regions',
       link: '',
@@ -40,7 +40,7 @@ const GCCInitiativePage = () => {
       images: [gccHyderabadCover, gccHyderabadPartners]
     },
     {
-      title: 'GCC-PUNE',
+      title: 'ICAI GCC Summit-Pune',
       period: 'NOVEMBER - 2025',
       summary: 'GCC opportunities and skill development in Pune region',
       link: '',
@@ -152,8 +152,8 @@ const GCCInitiativePage = () => {
               
               <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
                 <div className="text-center">
-                  <div className="text-3xl font-bold text-gold mb-2">500+</div>
-                  <div className="text-white/80">Job Placements</div>
+                  <div className="text-3xl font-bold text-gold mb-2">700+</div>
+                  <div className="text-white/80">Delegates</div>
                 </div>
                 <div className="text-center">
                   <div className="text-3xl font-bold text-gold mb-2">200+</div>
