@@ -1,169 +1,59 @@
-import { useState } from 'react';
 import { Link } from 'react-router-dom';
-import { Users, Building, GraduationCap, Briefcase, Cpu, BookOpen, ExternalLink, Award } from 'lucide-react';
+import { Building, GraduationCap, Briefcase, Cpu, BookOpen } from 'lucide-react';
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/components/ui/card';
-import { Button } from '@/components/ui/button';
 import { Badge } from '@/components/ui/badge';
-import { Tabs, TabsContent, TabsList, TabsTrigger } from '@/components/ui/tabs';
-import gccdelhi from '@/assets/gcc_delhi.jpeg';
-import gccahmedabad from '@/assets/gcc_ahmedabad.jpeg';
-import gcchyderabad from '@/assets/gcc_hyderabad.jpeg';
-import gccpune from '@/assets/gcc_pune.jpeg';
-// Import hero image
 import heroSanjib from '@/assets/Hero_Sanjib.png';
+
 const ContributionsPage = () => {
-  const [selectedArea, setSelectedArea] = useState('all');
 
-  // Contribution areas data
-  const contributionAreas = [{
-    id: 'gcc-initiative',
-    name: 'GCC Initiative',
-    description: 'Global Capability Center opportunities and partnerships',
-    icon: Building,
-    color: 'text-blue-600',
-    count: 4
-  }, {
-    id: 'students-bos',
-    name: 'Students & BoS',
-    description: 'Student mentorship and Board of Studies contributions',
-    icon: GraduationCap,
-    color: 'text-green-600',
-    count: 6
-  }, {
-    id: 'msme-startups',
-    name: 'MSME & Start-ups',
-    description: 'Support frameworks and initiatives for small businesses',
-    icon: Briefcase,
-    color: 'text-purple-600',
-    count: 4
-  }, {
-    id: 'digital-transformation',
-    name: 'Digital Transformation',
-    description: 'Technology adoption and AI integration initiatives',
-    icon: Cpu,
-    color: 'text-red-600',
-    count: 5
-  }, {
-    id: 'books-coauthored',
-    name: 'Books Co-Authored',
-    description: 'Books, articles, and professional development tools',
-    icon: BookOpen,
-    color: 'text-indigo-600',
-    count: 2
-  }];
+  const contributionAreas = [
+    {
+      id: 'gcc-initiative',
+      name: 'GCC Initiative',
+      description: 'Global Capability Center opportunities and partnerships',
+      icon: Building,
+      color: 'text-blue-600',
+      count: 4,
+      path: '/gcc-initiative'
+    },
+    {
+      id: 'students-bos',
+      name: 'Students & BoS',
+      description: 'Student mentorship and Board of Studies contributions',
+      icon: GraduationCap,
+      color: 'text-green-600',
+      count: 6,
+      path: '/students-bos'
+    },
+    {
+      id: 'msme-startups',
+      name: 'MSME & Start-ups',
+      description: 'Support frameworks and initiatives for small businesses',
+      icon: Briefcase,
+      color: 'text-purple-600',
+      count: 4,
+      path: '/msme-startups'
+    },
+    {
+      id: 'digital-transformation',
+      name: 'Digital Transformation',
+      description: 'Technology adoption and AI integration initiatives',
+      icon: Cpu,
+      color: 'text-red-600',
+      count: 5,
+      path: '/digital-transformation'
+    },
+    {
+      id: 'books-coauthored',
+      name: 'Books Co-Authored',
+      description: 'Books, articles, and professional development tools',
+      icon: BookOpen,
+      color: 'text-indigo-600',
+      count: 2,
+      path: '/books-coauthored'
+    }
+  ];
 
-  // Detailed contributions data
-  const contributions = [
-  // GCC Initiative
-  {
-    area: 'gcc-initiative',
-    title: 'ICAI GCC Summit-Delhi',
-    period: 'JUNE - 2025',
-    summary: 'GCC opportunities and networking initiatives in Delhi NCR region',
-    link: '',
-    file: '',
-    achievements: ['Established GCC networking hub in Delhi', 'Connected CAs with major GCC employers', 'Organized quarterly GCC career fairs']
-  }, {
-    area: 'gcc-initiative',
-    title: 'ICAI GCC Summit-Ahmedabad',
-    period: 'AUGUST - 2025',
-    summary: 'GCC opportunities and partnerships in Gujarat region',
-    link: '',
-    file: '',
-    achievements: ['Facilitated GCC job placements in Ahmedabad', 'Created regional GCC career portal', 'Conducted GCC awareness workshops']
-  }, {
-    area: 'gcc-initiative',
-    title: 'ICAI GCC Summit-Hyderabad',
-    period: 'OCTOBER - 2025',
-    summary: 'GCC initiatives in Telangana and Andhra Pradesh regions',
-    link: '',
-    file: '',
-    achievements: ['Partnered with major Hyderabad-based GCCs', 'Established GCC training programs', 'Built network of 100+ GCC professionals']
-  }, {
-    area: 'gcc-initiative',
-    title: 'ICAI GCC Summit -Pune',
-    period: 'NOVEMBER-2025',
-    summary: 'GCC opportunities and skill development in Pune region',
-    link: '',
-    file: '',
-    achievements: ['Launched GCC readiness program in Pune', 'Connected with 50+ GCC companies', 'Organized technical skill workshops']
-  },
-  // Students & BoS
-  {
-    area: 'students-bos',
-    title: 'Digital Mentorship Platform',
-    period: '2020 - Present',
-    summary: 'Online platform connecting experienced CAs with students and early-career professionals',
-    link: '',
-    file: '',
-    achievements: ['Mentored 1000+ CA students and professionals', 'Achieved 85% mentorship completion rate', 'Established 50+ mentor chapters across India']
-  }, {
-    area: 'students-bos',
-    title: 'Career Guidance Workshops',
-    period: '2019 - Present',
-    summary: 'Regular workshops on career planning and professional development',
-    link: '',
-    file: '',
-    achievements: ['Conducted 100+ workshops across 25 cities', 'Reached 15,000+ students and professionals', 'Developed comprehensive career planning toolkit']
-  },
-  // MSME & Start-ups
-  {
-    area: 'msme-startups',
-    title: 'MSME Financial Framework Initiative',
-    period: '2021 - Present',
-    summary: 'Comprehensive support system for small and medium enterprises',
-    link: '',
-    file: '',
-    achievements: ['Developed standardized financial management frameworks', 'Supported 500+ MSMEs with compliance and growth strategies', 'Created digital tools for financial planning and analysis']
-  }, {
-    area: 'msme-startups',
-    title: 'Start-up Advisory Program',
-    period: '2020 - Present',
-    summary: 'Strategic advisory services for emerging businesses and entrepreneurs',
-    link: '',
-    file: '',
-    achievements: ['Advised 200+ start-ups on financial structuring', 'Facilitated $10M+ in funding connections', 'Established start-up CA network with 300+ members']
-  },
-  // Digital Transformation
-  {
-    area: 'digital-transformation',
-    title: 'AI in Accounting Research Initiative',
-    period: '2022 - Present',
-    summary: 'Leading research on artificial intelligence applications in accounting and audit',
-    link: '',
-    file: '',
-    achievements: ['Published 15+ research papers on AI in accounting', 'Developed AI-powered audit automation tools', 'Established AI research center with IIT collaboration']
-  }, {
-    area: 'digital-transformation',
-    title: 'Digital Accountants Community',
-    period: '2022 - Present',
-    summary: 'Founded and lead community of digitally-focused accounting professionals',
-    link: '',
-    file: '',
-    achievements: ['Built community of 10,000+ digital accounting professionals', 'Organized 50+ digital transformation workshops', 'Created comprehensive digital skills certification program']
-  },
-  // Books Co-Authored
-  {
-    area: 'books-coauthored',
-    title: 'The Digital Professional (Book)',
-    period: '2018',
-    summary: 'Bestselling book on digital transformation for accounting professionals',
-    link: 'https://heyzine.com/flip-book/3b95274311.html',
-    file: '',
-    achievements: ['Sold 25,000+ copies across India and internationally', 'Translated into 3 regional languages', 'Adopted as reference text by 20+ CA training institutes']
-  }, {
-    area: 'books-coauthored',
-    title: 'MSME Shorts:Handholding MSMEs - From Inception to Success',
-    period: '2024',
-    summary: 'A Guide to Small Businesses compiling key insights on MSMEs',
-    link: 'https://heyzine.com/flip-book/5c549b0e51.html#page/6',
-    file: '',
-    achievements: ['Downloaded by 50,000+ professionals', 'Regular updates with latest industry trends', 'Integrated with major CA learning platforms']
-  }];
-
-  // Filter contributions based on selected area
-  const filteredContributions = selectedArea === 'all' ? contributions : contributions.filter(contribution => contribution.area === selectedArea);
-  const getAreaById = (id: string) => contributionAreas.find(area => area.id === id);
   return <div className="min-h-screen bg-gradient-to-b from-background to-muted">
       {/* Hero Banner */}
       <section className="relative h-[60vh] min-h-[400px] overflow-hidden">
@@ -189,99 +79,27 @@ const ContributionsPage = () => {
       </section>
 
       <div className="container py-16">
-        {/* Overview Cards */}
+        {/* Contribution Area Cards */}
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 mb-12">
-          {contributionAreas.map(area => {
-            const CardWrapper = area.id === 'gcc-initiative' 
-              ? ({ children }: { children: React.ReactNode }) => <Link to="/gcc-initiative">{children}</Link>
-              : ({ children }: { children: React.ReactNode }) => <div onClick={() => setSelectedArea(area.id)}>{children}</div>;
-            
-            return (
-              <CardWrapper key={area.id}>
-                <Card className={`shadow-professional hover-lift cursor-pointer transition-all ${selectedArea === area.id ? 'ring-2 ring-gold' : ''}`}>
-              <CardHeader className="text-center pb-3">
-                <div className={`w-16 h-16 mx-auto mb-3 rounded-full bg-muted flex items-center justify-center ${area.color}`}>
-                  <area.icon className="h-8 w-8" />
-                </div>
-                <CardTitle className="font-montserrat text-lg">{area.name}</CardTitle>
-                <Badge variant="outline" className="mx-auto">
-                  {area.count} Contributions
-                </Badge>
-              </CardHeader>
-              <CardContent className="text-center pt-0">
-                <CardDescription>{area.description}</CardDescription>
-              </CardContent>
-            </Card>
-          </CardWrapper>
-        );
-      })}
+          {contributionAreas.map(area => (
+            <Link key={area.id} to={area.path}>
+              <Card className="shadow-professional hover-lift cursor-pointer transition-all h-full">
+                <CardHeader className="text-center pb-3">
+                  <div className={`w-16 h-16 mx-auto mb-3 rounded-full bg-muted flex items-center justify-center ${area.color}`}>
+                    <area.icon className="h-8 w-8" />
+                  </div>
+                  <CardTitle className="font-montserrat text-lg">{area.name}</CardTitle>
+                  <Badge variant="outline" className="mx-auto">
+                    {area.count} Contributions
+                  </Badge>
+                </CardHeader>
+                <CardContent className="text-center pt-0">
+                  <CardDescription>{area.description}</CardDescription>
+                </CardContent>
+              </Card>
+            </Link>
+          ))}
         </div>
-
-        {/* Filter Tabs */}
-        <Tabs value={selectedArea} onValueChange={setSelectedArea} className="mb-8">
-          <TabsList className="w-full flex flex-wrap justify-center gap-2">
-            <TabsTrigger value="all">All Contributions</TabsTrigger>
-            {contributionAreas.map(area => (
-              <TabsTrigger key={area.id} value={area.id}>
-                {area.name}
-              </TabsTrigger>
-            ))}
-          </TabsList>
-
-          <TabsContent value={selectedArea} className="mt-8">
-            {/* Contributions List */}
-            <div className="grid gap-6">
-              {filteredContributions.map((contribution, index) => {
-                const area = getAreaById(contribution.area);
-                return (
-                  <Card key={index} className="shadow-professional hover-lift">
-                    <CardHeader>
-                      <div className="flex items-start justify-between">
-                        <div className="flex-1">
-                          <div className="flex items-center gap-3 mb-2">
-                            {area && <area.icon className={`h-5 w-5 ${area.color}`} />}
-                            <Badge variant="outline">{contribution.period}</Badge>
-                          </div>
-                          <CardTitle className="font-montserrat text-xl mb-2">
-                            {contribution.title}
-                          </CardTitle>
-                          <CardDescription className="text-base">
-                            {contribution.summary}
-                          </CardDescription>
-                        </div>
-                      </div>
-                    </CardHeader>
-                    <CardContent>
-                      <div className="space-y-2">
-                        <h4 className="font-semibold text-sm text-muted-foreground">Key Achievements:</h4>
-                        <ul className="space-y-2">
-                          {contribution.achievements.map((achievement, i) => (
-                            <li key={i} className="flex items-start gap-2">
-                              <Award className="h-4 w-4 text-gold mt-1 flex-shrink-0" />
-                              <span className="text-sm">{achievement}</span>
-                            </li>
-                          ))}
-                        </ul>
-                      </div>
-                      {(contribution.link || contribution.file) && (
-                        <div className="flex gap-3 mt-4">
-                          {contribution.link && (
-                            <Button variant="outline" size="sm" asChild>
-                              <a href={contribution.link} target="_blank" rel="noopener noreferrer">
-                                <ExternalLink className="h-4 w-4 mr-2" />
-                                Learn More
-                              </a>
-                            </Button>
-                          )}
-                        </div>
-                      )}
-                    </CardContent>
-                  </Card>
-                );
-              })}
-            </div>
-          </TabsContent>
-        </Tabs>
 
         {/* Impact Summary */}
         <div className="mt-16">
