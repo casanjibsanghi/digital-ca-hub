@@ -8,17 +8,17 @@ import heroDigital from '@/assets/hero-digital.jpg';
 const StudentsBosPage = () => {
   const contributions = [
     {
-      title: 'Digital Mentorship Platform',
-      period: '2020 - Present',
-      summary: 'Online platform connecting experienced CAs with students and early-career professionals',
+      title: 'RUN-100',
+      period: 'March - 2025',
+      summary: 'Reskill – Upskill – Newskill | 100 Days – 100 Session',
       link: '',
       file: '',
       achievements: ['Mentored 1000+ CA students and professionals', 'Achieved 85% mentorship completion rate', 'Established 50+ mentor chapters across India']
     },
     {
       title: 'Career Guidance Workshops',
-      period: '2019 - Present',
-      summary: 'Regular workshops on career planning and professional development',
+      period: '  August - 2025',
+      summary: 'AI Understanding for Rising Achievers',
       link: '',
       file: '',
       achievements: ['Conducted 100+ workshops across 25 cities', 'Reached 15,000+ students and professionals', 'Developed comprehensive career planning toolkit']
