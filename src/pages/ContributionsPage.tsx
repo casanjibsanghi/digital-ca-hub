@@ -298,20 +298,20 @@ const ContributionsPage = () => {
               
               <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
                 <div className="text-center">
-                  <div className="text-3xl font-bold text-gold mb-2">1000+</div>
-                  <div className="text-primary-foreground/80">CAs Mentored</div>
+                  <div className="text-3xl font-bold text-gold mb-2">50,000+</div>
+                  <div className="text-primary-foreground/80">Students & Members Empowered</div>
                 </div>
                 <div className="text-center">
-                  <div className="text-3xl font-bold text-gold mb-2">500+</div>
-                  <div className="text-primary-foreground/80">GCC Placements</div>
+                  <div className="text-3xl font-bold text-gold mb-2">200+</div>
+                  <div className="text-primary-foreground/80">Events & Initiatives Led</div>
                 </div>
                 <div className="text-center">
-                  <div className="text-3xl font-bold text-gold mb-2">10,000+</div>
-                  <div className="text-primary-foreground/80">Community Members</div>
+                  <div className="text-3xl font-bold text-gold mb-2">10+</div>
+                  <div className="text-primary-foreground/80">International Delegations/Engagements</div>
                 </div>
                 <div className="text-center">
-                  <div className="text-3xl font-bold text-gold mb-2">25+</div>
-                  <div className="text-primary-foreground/80">Cities Reached</div>
+                  <div className="text-3xl font-bold text-gold mb-2">1800+</div>
+                  <div className="text-primary-foreground/80">Expanding GCC Opportunities for Indian CAs</div>
                 </div>
               </div>
             </CardContent>
