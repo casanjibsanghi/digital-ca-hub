@@ -16,8 +16,8 @@ const StudentsBosPage = () => {
       achievements: ['Mentored 1000+ CA students and professionals', 'Achieved 85% mentorship completion rate', 'Established 50+ mentor chapters across India']
     },
     {
-      title: 'Career Guidance Workshops',
-      period: '  August - 2025',
+      title: 'AURA',
+      period: 'August - 2025',
       summary: 'AI Understanding for Rising Achievers',
       link: '',
       file: '',
