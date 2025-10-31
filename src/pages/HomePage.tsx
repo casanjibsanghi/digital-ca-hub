@@ -16,9 +16,11 @@ const HomePage = () => {
     outcomes: [
       'Elected to serve on the ICAI council for 2025-29 term',
       'Vice-Chairman - Board of Studies - Operations of ICAI',
+      'Deputy Convenor - Digital Re-Engineering & Transformation Directorate',
+      'Deputy Convenor - Human Resources Directorate',
       'Convenor - Group to Promote India as an Accounting GCC of ICAI',
       'Convenor - Group on Digital Audit Tools for Members',
-      'Convenor - Group on Tripple Entry Accounting System'
+      'Convenor - Group on Triple Entry Accounting System'
     ]
   }, {
     year: '2024',
@@ -34,7 +36,7 @@ const HomePage = () => {
     title: 'Vice-Chairman',
     organization: 'Eastern India Regional Council of ICAI',
     outcomes: ['Chairman - Eastern India Chartered Accountants Students Association-EIRC of ICAI',
-              'Hosted the first-ever RRR – Reskill, Resolve & Rejoice – Student National Conference, achieving a record-breaking turnout of delegates and students'
+              'Hosted the first-ever RRR – Reskill, Resolve & Rejoice – Student National Conference, achieving a record-breaking count of students'
               ]
   }, {
     year: '2022',
