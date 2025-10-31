@@ -18,7 +18,7 @@ const HomePage = () => {
       'Vice-Chairman - Board of Studies - Operations of ICAI',
       'Convenor - Group to Promote India as an Accounting GCC of ICAI',
       'Convenor - Group on Digital Audit Tools for Members',
-      'Convenor - Group on Tripple Entry Accounting System',
+      'Convenor - Group on Tripple Entry Accounting System'
     ]
   }, {
     year: '2024',
