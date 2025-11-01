@@ -121,7 +121,7 @@ const GCCInitiativePage = () => {
                 
                 {/* Right side - Flyer image */}
                 {(contribution as any).images && (
-                  <div className="w-full lg:w-[400px] flex-shrink-0 p-4 lg:p-6 flex items-start">
+                  <div className="w-full lg:w-[280px] flex-shrink-0 p-4 lg:p-6 flex items-start">
                     {(contribution as any).images.map((image: string, i: number) => (
                       <img 
                         key={i} 
