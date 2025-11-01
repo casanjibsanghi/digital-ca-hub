@@ -79,59 +79,66 @@ const GCCInitiativePage = () => {
         <div className="grid gap-6 max-w-5xl mx-auto">
           {gccContributions.map((contribution, index) => (
             <Card key={index} className="shadow-professional hover-lift">
-              <CardHeader>
-                <div className="flex items-start justify-between">
-                  <div className="flex-1">
-                    <div className="flex items-center gap-3 mb-2">
-                      <Building className="h-5 w-5 text-blue-600" />
-                      <Badge variant="outline">{contribution.period}</Badge>
+              <div className="flex flex-col lg:flex-row">
+                {/* Left side - Text content */}
+                <div className="flex-1">
+                  <CardHeader>
+                    <div className="flex items-start justify-between">
+                      <div className="flex-1">
+                        <div className="flex items-center gap-3 mb-2">
+                          <Building className="h-5 w-5 text-blue-600" />
+                          <Badge variant="outline">{contribution.period}</Badge>
+                        </div>
+                        <CardTitle className="font-montserrat text-xl mb-2">
+                          {contribution.title}
+                        </CardTitle>
+                        <CardDescription className="text-base">
+                          {contribution.summary}
+                        </CardDescription>
+                      </div>
                     </div>
-                    <CardTitle className="font-montserrat text-xl mb-2">
-                      {contribution.title}
-                    </CardTitle>
-                    <CardDescription className="text-base">
-                      {contribution.summary}
-                    </CardDescription>
-                  </div>
+                  </CardHeader>
+                  <CardContent>
+                    <div className="space-y-2">
+                      <h4 className="font-semibold text-sm text-muted-foreground">Key Achievements:</h4>
+                      <ul className="space-y-2">
+                        {contribution.achievements.map((achievement, i) => (
+                          <li key={i} className="flex items-start gap-2">
+                            <Award className="h-4 w-4 text-gold mt-1 flex-shrink-0" />
+                            <span className="text-sm">{achievement}</span>
+                          </li>
+                        ))}
+                      </ul>
+                    </div>
+                    {(contribution.link || contribution.file) && (
+                      <div className="flex gap-3 mt-4">
+                        {contribution.link && (
+                          <Button variant="outline" size="sm" asChild>
+                            <a href={contribution.link} target="_blank" rel="noopener noreferrer">
+                              <ExternalLink className="h-4 w-4 mr-2" />
+                              Learn More
+                            </a>
+                          </Button>
+                        )}
+                      </div>
+                    )}
+                  </CardContent>
                 </div>
-              </CardHeader>
-              <CardContent>
-                <div className="space-y-2">
-                  <h4 className="font-semibold text-sm text-muted-foreground">Key Achievements:</h4>
-                  <ul className="space-y-2">
-                    {contribution.achievements.map((achievement, i) => (
-                      <li key={i} className="flex items-start gap-2">
-                        <Award className="h-4 w-4 text-gold mt-1 flex-shrink-0" />
-                        <span className="text-sm">{achievement}</span>
-                      </li>
-                     ))}
-                   </ul>
-                 </div>
-                 {(contribution as any).images && (
-                   <div className="mt-6">
-                     {(contribution as any).images.map((image: string, i: number) => (
-                       <img 
-                         key={i} 
-                         src={image} 
-                         alt={`${contribution.title} flyer`}
-                         className="w-full rounded-lg shadow-md hover:shadow-lg transition-shadow"
-                       />
-                     ))}
-                   </div>
-                 )}
-                 {(contribution.link || contribution.file) && (
-                   <div className="flex gap-3 mt-4">
-                     {contribution.link && (
-                       <Button variant="outline" size="sm" asChild>
-                         <a href={contribution.link} target="_blank" rel="noopener noreferrer">
-                           <ExternalLink className="h-4 w-4 mr-2" />
-                           Learn More
-                         </a>
-                       </Button>
-                     )}
-                   </div>
-                 )}
-              </CardContent>
+                
+                {/* Right side - Flyer image */}
+                {(contribution as any).images && (
+                  <div className="lg:w-80 lg:flex-shrink-0 p-6">
+                    {(contribution as any).images.map((image: string, i: number) => (
+                      <img 
+                        key={i} 
+                        src={image} 
+                        alt={`${contribution.title} flyer`}
+                        className="w-full h-auto rounded-lg shadow-md hover:shadow-lg transition-shadow"
+                      />
+                    ))}
+                  </div>
+                )}
+              </div>
             </Card>
           ))}
         </div>
