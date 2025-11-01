@@ -80,7 +80,21 @@ const GCCInitiativePage = () => {
           {gccContributions.map((contribution, index) => (
             <Card key={index} className="shadow-professional hover-lift overflow-hidden">
               <div className="flex flex-col lg:flex-row">
-                {/* Left side - Text content */}
+                {/* Left side - Flyer image */}
+                {(contribution as any).images && (
+                  <div className="w-full lg:w-[320px] flex-shrink-0 p-4 lg:p-6 flex items-start">
+                    {(contribution as any).images.map((image: string, i: number) => (
+                      <img 
+                        key={i} 
+                        src={image} 
+                        alt={`${contribution.title} flyer`}
+                        className="w-full h-auto rounded-lg shadow-md hover:shadow-lg transition-shadow object-contain"
+                      />
+                    ))}
+                  </div>
+                )}
+                
+                {/* Right side - Text content */}
                 <div className="flex-1 p-6">
                   <div className="flex items-center gap-3 mb-2">
                     <Building className="h-5 w-5 text-blue-600" />
@@ -118,20 +132,6 @@ const GCCInitiativePage = () => {
                     </div>
                   )}
                 </div>
-                
-                {/* Right side - Flyer image */}
-                {(contribution as any).images && (
-                  <div className="w-full lg:w-[280px] flex-shrink-0 p-4 lg:p-6 flex items-start">
-                    {(contribution as any).images.map((image: string, i: number) => (
-                      <img 
-                        key={i} 
-                        src={image} 
-                        alt={`${contribution.title} flyer`}
-                        className="w-full h-auto rounded-lg shadow-md hover:shadow-lg transition-shadow object-contain"
-                      />
-                    ))}
-                  </div>
-                )}
               </div>
             </Card>
           ))}
