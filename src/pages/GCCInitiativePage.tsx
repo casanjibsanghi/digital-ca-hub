@@ -129,12 +129,16 @@ const GCCInitiativePage = () => {
                 {(contribution as any).images && (
                   <div className="lg:w-80 lg:flex-shrink-0 p-6">
                     {(contribution as any).images.map((image: string, i: number) => (
-                      <img 
-                        key={i} 
-                        src={image} 
-                        alt={`${contribution.title} flyer`}
-                        className="w-full h-auto rounded-lg shadow-md hover:shadow-lg transition-shadow"
-                      />
+                      <div 
+                        key={i}
+                        className="aspect-square w-full rounded-lg shadow-md hover:shadow-lg transition-shadow overflow-hidden"
+                      >
+                        <img 
+                          src={image} 
+                          alt={`${contribution.title} flyer`}
+                          className="w-full h-full object-cover"
+                        />
+                      </div>
                     ))}
                   </div>
                 )}
