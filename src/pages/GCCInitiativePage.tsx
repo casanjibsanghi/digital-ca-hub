@@ -79,9 +79,9 @@ const GCCInitiativePage = () => {
         <div className="grid gap-6 max-w-5xl mx-auto">
           {gccContributions.map((contribution, index) => (
             <Card key={index} className="shadow-professional hover-lift">
-              <div className="flex flex-col lg:flex-row">
+              <div className="flex flex-col lg:flex-row gap-6">
                 {/* Left side - Text content */}
-                <div className="flex-1">
+                <div className="flex-1 min-w-0">
                   <CardHeader>
                     <div className="flex items-start justify-between">
                       <div className="flex-1">
@@ -127,18 +127,14 @@ const GCCInitiativePage = () => {
                 
                 {/* Right side - Flyer image */}
                 {(contribution as any).images && (
-                  <div className="lg:w-80 lg:flex-shrink-0 p-6">
+                  <div className="w-full lg:w-96 flex-shrink-0 self-start">
                     {(contribution as any).images.map((image: string, i: number) => (
-                      <div 
-                        key={i}
-                        className="aspect-square w-full rounded-lg shadow-md hover:shadow-lg transition-shadow overflow-hidden"
-                      >
-                        <img 
-                          src={image} 
-                          alt={`${contribution.title} flyer`}
-                          className="w-full h-full object-cover"
-                        />
-                      </div>
+                      <img 
+                        key={i} 
+                        src={image} 
+                        alt={`${contribution.title} flyer`}
+                        className="w-full h-auto rounded-lg shadow-md hover:shadow-lg transition-shadow"
+                      />
                     ))}
                   </div>
                 )}
