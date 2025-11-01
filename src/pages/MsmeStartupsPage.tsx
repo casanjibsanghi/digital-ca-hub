@@ -3,7 +3,7 @@ import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/com
 import { Badge } from '@/components/ui/badge';
 import { Button } from '@/components/ui/button';
 import { ExternalLink } from 'lucide-react';
-import heroProfessional from '@/assets/hero-professional.jpg';
+import heroMsme from '@/assets/hero-msme.jpg';
 
 const MsmeStartupsPage = () => {
   const contributions = [
@@ -30,7 +30,7 @@ const MsmeStartupsPage = () => {
       {/* Hero Banner */}
       <section className="relative h-[40vh] min-h-[300px] overflow-hidden">
         <div className="absolute inset-0 z-0">
-          <img src={heroProfessional} alt="MSME & Start-ups" className="w-full h-full object-cover" />
+          <img src={heroMsme} alt="MSME & Start-ups" className="w-full h-full object-cover" />
           <div className="absolute inset-0 bg-black/50"></div>
         </div>
         <div className="relative z-10 h-full flex items-center">
