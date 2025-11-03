@@ -1,89 +1,53 @@
 import { useState } from 'react';
+import { Tabs, TabsContent, TabsList, TabsTrigger } from '@/components/ui/tabs';
+import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
 
 // Import hero image
 import heroSanjib from '@/assets/Hero_Sanjib.png';
 const ArticlesPage = () => {
   const [searchTerm, setSearchTerm] = useState('');
 
-  // Static articles with Google Drive links
-  const articles = [{
-    id: 1,
-    title: "AQMM DCMM",
-    driveLink: "https://drive.google.com/file/d/1i2W_LdigO4pxF8DDBzsQnpJht304ovuD/view?usp=sharing"
-  }, {
-    id: 2,
-    title: "Audit Quality Maturity Model: Enhancing Audit Standards",
-    driveLink: "https://drive.google.com/file/d/1jAk9_6-zO6cU2Io2z_kfU6_Aa0hAKVOj/view?usp=sharing"
-  }, {
-    id: 3,
-    title: "Blockchain Technology: Revolutionizing the Accounting Landscape",
-    driveLink: "https://drive.google.com/file/d/1nB0JNYVcue9Y6v1zHAEf9sVIJ6HEmh32/view?usp=sharing"
-  }, {
-    id: 4,
-    title: "ChatGPT at the helm – Empowering Businesses – Empowering the World",
-    driveLink: "https://drive.google.com/file/d/1xbxOtIGzYQoeZkKdpvDd8nvb0Az-Gz2J/view?usp=sharing"
-  }, {
-    id: 5,
-    title: "Building your Custom GPT",
-    driveLink: "https://drive.google.com/file/d/1sbG5ubu1bJdQEVsDeqXUUDyV-VdW-aAo/view?usp=sharing"
-  }, {
-    id: 6,
-    title: "Elevating Excellence: Navigating Digital Competency Maturity Model",
-    driveLink: "https://drive.google.com/file/d/1aaO2Tg9cA7nniMUfMcJEE7d64MYBCGhN/view?usp=sharing"
-  }, {
-    id: 7,
-    title: "Python in Excel: Harnessing the Power of Two Titans - The Best of Both Worlds for Data Analysis and Visualization",
-    driveLink: "https://drive.google.com/file/d/1k91S0g-tkxDCxpTYZHRKsyxUqmlINcDd/view?usp=sharing"
-  }, {
-    id: 8,
-    title: "Harnessing Google My Business: A Game-Changer for Local Enterprises",
-    driveLink: "https://drive.google.com/file/d/1I6I-5Nn47ApblYnA7Gop1KPn-Shw_ofo/view?usp=sharing"
-  }, {
-    id: 9,
-    title: "ICAI CA GPT: Transforming Chartered Accountancy with AI",
-    driveLink: "https://drive.google.com/file/d/15k_p9DDrVc9oWuPia0EnB70Ys1Dsi22a/view?usp=sharing"
-  }, {
-    id: 10,
-    title: "Embracing Technology for Financial Forecasting: Tech tells your Future",
-    driveLink: "https://drive.google.com/file/d/1wbUOPriqPfRzwmqGEX7efeHnCXViPD71/view?usp=sharing"
-  }, {
-    id: 11,
-    title: "Chartered Accountants as Professionals – In the World of MSMEs",
-    driveLink: "https://drive.google.com/file/d/1EdDAA60J6q5G3VCUVYpeVNnSB77gAx0m/view?usp=sharing"
-  }, {
-    id: 12,
-    title: "Sustainable Finance: Investing in Our Collective Future",
-    driveLink: "https://drive.google.com/file/d/1qoTtUmQQtU-0XW6Ct6V6br_HqvKWa1EP/view?usp=sharing"
-  }, {
-    id: 13,
-    title: "The AI-Ready Chartered Accountant and a GCC Leader: Skills Every Professionals Must Learn in the Next 2 Years",
-    driveLink: "https://drive.google.com/file/d/1E4xey2ycNU_PvZERRO_CnfGt2lVAdZ9-/view?usp=sharing"
-  }, {
-    id: 14,
-    title: "The Triple “A” Advantage – Artificial Intelligence, Accounting and Advisory",
-    driveLink: "https://drive.google.com/file/d/1TNpUUqll7vRy2U5-prXbAkqBPSksrKM2/view?usp=sharing"
-  }, {
-    id: 15,
-    title: "Startup India, led by Chartered Accountants: Our Role in the growth of Entrepreneurial Ecosystem",
-    driveLink: "https://drive.google.com/file/d/1Tqa3Q3whNtvL6b6QexrysdR273hVfKJj/view?usp=sharing"
-  }, {
-    id: 16,
-    title: "Antardrishti to Antarashtriya: From Inner Clarity to Global Leadership",
-    driveLink: "https://drive.google.com/file/d/18_4ehECyi1hy3PqoWAazvXcl-m5bPFJV/view?usp=sharing"
-  }, {
-    id: 17,
-    title: "From Ledgers to Global Leadership: Why we as Chartered Accountants Must Ditch the ‘Number Cruncher’ Tag",
-    driveLink: "https://drive.google.com/file/d/1qnkNNXT_JxdpyX5vtZ2ZhTqiS-xL3vsO/view?usp=sharing"
-  }, {
-    id: 18,
-    title: "RISE: Resilience, Integrity, Strategy, Excellence — A Working Formula for Professionals (with a Chartered Accountant’s Lens)",
-    driveLink: "https://drive.google.com/file/d/1VgypvT3LAhmpPS_YWHKYGLppdX4CGcxm/view?usp=sharing"
-  }
-  // Add more articles here
-  ];
+  // Categorized articles
+  const categories = {
+    "AI & Digital Transformation": [
+      { id: 1, title: "AI in BPO & KPO", driveLink: "#" },
+      { id: 2, title: "Technology – Present and Future", driveLink: "#" },
+      { id: 3, title: "ChatGPT & AI", driveLink: "https://drive.google.com/file/d/1xbxOtIGzYQoeZkKdpvDd8nvb0Az-Gz2J/view?usp=sharing" },
+      { id: 4, title: "MSME – Automation – Guwahati", driveLink: "#" },
+      { id: 5, title: "Becoming AI Ready", driveLink: "https://drive.google.com/file/d/1E4xey2ycNU_PvZERRO_CnfGt2lVAdZ9-/view?usp=sharing" },
+      { id: 6, title: "Transformative Technologies: Risks & Opportunities", driveLink: "#" },
+      { id: 7, title: "GATE (Grow, Aim, Transform, Engage)", driveLink: "#" }
+    ],
+    "Professional Capability & Skill Building": [
+      { id: 8, title: "Digital Empowerment for CAs", driveLink: "#" },
+      { id: 9, title: "Capacity Building", driveLink: "#" },
+      { id: 10, title: "Data Visualisation Presentation", driveLink: "https://drive.google.com/file/d/1k91S0g-tkxDCxpTYZHRKsyxUqmlINcDd/view?usp=sharing" },
+      { id: 11, title: "Future Fit Chartered Accountants", driveLink: "https://drive.google.com/file/d/1qnkNNXT_JxdpyX5vtZ2ZhTqiS-xL3vsO/view?usp=sharing" }
+    ],
+    "Audit, Assurance & Compliance Modernization": [
+      { id: 12, title: "The Peer Review Mastery", driveLink: "#" },
+      { id: 13, title: "Audit Trail in 10 Minutes", driveLink: "#" },
+      { id: 14, title: "Technology – Opportunities & Challenges for Practitioners", driveLink: "#" }
+    ],
+    "Global Finance & GCC Leadership": [
+      { id: 15, title: "CAs Leading GCCs – Sanjib Sanghi", driveLink: "#" },
+      { id: 16, title: "AI & Startup PPT", driveLink: "https://drive.google.com/file/d/1Tqa3Q3whNtvL6b6QexrysdR273hVfKJj/view?usp=sharing" },
+      { id: 17, title: "India GCC Panorama", driveLink: "#" }
+    ]
+  };
+
+  // Get all articles for search
+  const allArticles = Object.entries(categories).flatMap(([category, articles]) => 
+    articles.map(article => ({ ...article, category }))
+  );
 
   // Filter articles based on search
-  const filteredArticles = articles.filter(article => article.title.toLowerCase().includes(searchTerm.toLowerCase()));
+  const filteredArticles = searchTerm 
+    ? allArticles.filter(article => 
+        article.title.toLowerCase().includes(searchTerm.toLowerCase()) ||
+        article.category.toLowerCase().includes(searchTerm.toLowerCase())
+      )
+    : null;
   return <div className="min-h-screen bg-gradient-to-b from-background to-muted">
       {/* Hero Banner */}
       <section className="relative h-[60vh] min-h-[400px] overflow-hidden">
@@ -108,18 +72,81 @@ const ArticlesPage = () => {
 
       <div className="container py-16">
         {/* Search Section */}
-        
+        <div className="mb-8">
+          <input
+            type="text"
+            placeholder="Search articles..."
+            value={searchTerm}
+            onChange={(e) => setSearchTerm(e.target.value)}
+            className="w-full max-w-md mx-auto block px-4 py-2 rounded-lg border bg-background"
+          />
+        </div>
 
-        {/* Articles Grid */}
-        {filteredArticles.length === 0 ? <div className="text-center py-12">
-            <p className="text-muted-foreground">No articles found.</p>
-          </div> : <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
-            {filteredArticles.map(article => <a key={article.id} href={article.driveLink} target="_blank" rel="noopener noreferrer" className="flex items-center justify-center min-h-[120px] p-6 border rounded-lg bg-card hover:bg-gold/10 hover:shadow-lg transition-all duration-300 hover:border-gold">
-                <h3 className="font-montserrat font-semibold text-lg text-foreground hover:text-gold transition-colors text-center">
-                  {article.title}
-                </h3>
-              </a>)}
-          </div>}
+        {/* Search Results or Categorized View */}
+        {searchTerm ? (
+          <div>
+            <h2 className="text-2xl font-bold mb-6">Search Results</h2>
+            {filteredArticles && filteredArticles.length === 0 ? (
+              <div className="text-center py-12">
+                <p className="text-muted-foreground">No articles found.</p>
+              </div>
+            ) : (
+              <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
+                {filteredArticles?.map(article => (
+                  <a 
+                    key={article.id} 
+                    href={article.driveLink} 
+                    target="_blank" 
+                    rel="noopener noreferrer" 
+                    className="flex flex-col min-h-[120px] p-6 border rounded-lg bg-card hover:bg-gold/10 hover:shadow-lg transition-all duration-300 hover:border-gold"
+                  >
+                    <p className="text-sm text-muted-foreground mb-2">{article.category}</p>
+                    <h3 className="font-montserrat font-semibold text-lg text-foreground hover:text-gold transition-colors">
+                      {article.title}
+                    </h3>
+                  </a>
+                ))}
+              </div>
+            )}
+          </div>
+        ) : (
+          <Tabs defaultValue="category-0" className="w-full">
+            <TabsList className="grid w-full grid-cols-2 lg:grid-cols-4 mb-8">
+              {Object.keys(categories).map((category, index) => (
+                <TabsTrigger key={index} value={`category-${index}`}>
+                  {category}
+                </TabsTrigger>
+              ))}
+            </TabsList>
+            
+            {Object.entries(categories).map(([categoryName, articles], index) => (
+              <TabsContent key={index} value={`category-${index}`}>
+                <Card>
+                  <CardHeader>
+                    <CardTitle className="text-2xl">{categoryName}</CardTitle>
+                  </CardHeader>
+                  <CardContent>
+                    <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-4">
+                      {articles.map(article => (
+                        <a 
+                          key={article.id} 
+                          href={article.driveLink} 
+                          target="_blank" 
+                          rel="noopener noreferrer" 
+                          className="flex items-center justify-center min-h-[100px] p-4 border rounded-lg bg-background hover:bg-gold/10 hover:shadow-lg transition-all duration-300 hover:border-gold"
+                        >
+                          <h3 className="font-montserrat font-semibold text-base text-foreground hover:text-gold transition-colors text-center">
+                            {article.title}
+                          </h3>
+                        </a>
+                      ))}
+                    </div>
+                  </CardContent>
+                </Card>
+              </TabsContent>
+            ))}
+          </Tabs>
+        )}
       </div>
     </div>;
 };
