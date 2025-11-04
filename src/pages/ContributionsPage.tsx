@@ -22,7 +22,7 @@ const ContributionsPage = () => {
       description: 'Student mentorship and Board of Studies contributions',
       icon: GraduationCap,
       color: 'text-green-600',
-      count: 6,
+      count: 2,
       path: '/students-bos'
     },
     {
@@ -31,7 +31,7 @@ const ContributionsPage = () => {
       description: 'Support frameworks and initiatives for small businesses',
       icon: Briefcase,
       color: 'text-purple-600',
-      count: 4,
+      count: 2,
       path: '/msme-startups'
     },
     {
@@ -40,7 +40,7 @@ const ContributionsPage = () => {
       description: 'Technology adoption and AI integration initiatives',
       icon: Cpu,
       color: 'text-red-600',
-      count: 5,
+      count: 2,
       path: '/digital-transformation'
     },
     {
