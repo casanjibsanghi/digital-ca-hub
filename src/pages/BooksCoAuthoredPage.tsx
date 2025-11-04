@@ -3,7 +3,7 @@ import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/com
 import { Badge } from '@/components/ui/badge';
 import { Button } from '@/components/ui/button';
 import { ExternalLink } from 'lucide-react';
-import heroIcai from '@/assets/hero-icai.jpg';
+import heroBooks from '@/assets/hero-books.jpg';
 import bookDigitalProfessional from '@/assets/book-digital-professional.png';
 import bookMsmeShorts from '@/assets/book-msme-shorts.png';
 
@@ -32,7 +32,7 @@ const BooksCoAuthoredPage = () => {
       {/* Hero Banner */}
       <section className="relative h-[40vh] min-h-[300px] overflow-hidden">
         <div className="absolute inset-0 z-0">
-          <img src={heroIcai} alt="Books Co-Authored" className="w-full h-full object-cover" />
+          <img src={heroBooks} alt="Books Co-Authored" className="w-full h-full object-cover" />
           <div className="absolute inset-0 bg-black/50"></div>
         </div>
         <div className="relative z-10 h-full flex items-center">
