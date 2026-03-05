@@ -94,7 +94,7 @@ const ProfilePage = () => {
                     asChild
                   >
                     <a 
-                      href="https://drive.google.com/file/d/1Gmk5r6AWzBONb6km3PpjBnMhBDp2InYg/view?usp=drive_link" 
+                      href="https://docs.google.com/document/d/1eyvda_jArIUi8-U84YyVRGWv_wMnyXKbW4YYfRiQztw/edit?tab=t.0" 
                       target="_blank" 
                       rel="noopener noreferrer"
                     >
