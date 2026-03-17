@@ -7,7 +7,7 @@ import { Badge } from '@/components/ui/badge';
 import heroSanjib from '@/assets/Hero_Sanjib.png';
 import profilePhoto from '@/assets/hero-sanjib.jpg';
 const ProfilePage = () => {
-  const highlights = ['Council Member, ICAI (2025–29)', 'Chairman, EIRC-ICAI (2024-25)', 'Co-authored "The Digital Professional"', 'Co-authored "MSME Shorts - From Inception to Success"', 'Convenor, Global Trade and Services Directorate', 'Convenor, Continuing Professional Education Directorate', 'Vice Chairman, Sustainability Reporting Standards Board', 'Mentor to 1000+ students and professionals', 'Speaker at 50+ national and international conferences'];
+  const highlights = ['Council Member, ICAI (2025–29)', 'Chairman, EIRC-ICAI (2024-25)', 'Co-authored "The Digital Professional"', 'Co-authored "MSME Shorts - From Inception to Success"', 'Chairman, Global Trade and Services Committee', 'Convenor, Continuing Professional Education Directorate', 'Vice Chairman, Sustainability Reporting Standards Board', 'Mentor to 1000+ students and professionals', 'Speaker at 50+ national and international conferences'];
   const socialLinks = [{
     icon: Linkedin,
     href: '#',
