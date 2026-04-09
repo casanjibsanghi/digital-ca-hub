@@ -35,6 +35,11 @@ const ProfilePage = () => {
     description: '',
     year: ''
   }, {
+    icon: Award,
+    title: 'Member of GCC Advisory Committee under MeitY',
+    description: '',
+    year: ''
+  }, {
     icon: Users,
     title: 'Digital Transformation Leader',
     description: 'Built a digital community to influence young minds',
