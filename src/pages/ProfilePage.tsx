@@ -36,7 +36,7 @@ const ProfilePage = () => {
     year: ''
   }, {
     icon: Award,
-    title: 'Member of GCC Advisory Committee under MeitY',
+    title: 'Member of GCC Advisory Committee under MeitY, GOI',
     description: '',
     year: ''
   }, {
